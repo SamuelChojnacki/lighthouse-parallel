@@ -5,6 +5,7 @@ import { AppModule } from '../src/app.module';
 
 describe('Parallel Lighthouse Audits (e2e)', () => {
   let app: INestApplication;
+  const API_KEY = process.env.API_KEY || 'wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=';
 
   // Test URLs - using fast, reliable sites
   const TEST_URLS = [
@@ -45,6 +46,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
     it('should create a single audit job', async () => {
       const response = await request(app.getHttpServer())
         .post('/lighthouse/audit')
+        .set('X-API-Key', API_KEY)
         .send({ url: 'https://example.com' })
         .expect(201);
 
@@ -56,6 +58,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
     it('should get job status', async () => {
       const createResponse = await request(app.getHttpServer())
         .post('/lighthouse/audit')
+        .set('X-API-Key', API_KEY)
         .send({ url: 'https://example.com' })
         .expect(201);
 
@@ -63,6 +66,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
 
       const statusResponse = await request(app.getHttpServer())
         .get(`/lighthouse/job/${jobId}`)
+        .set('X-API-Key', API_KEY)
         .expect(200);
 
       expect(statusResponse.body).toHaveProperty('jobId', jobId);
@@ -74,6 +78,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
     it('should create batch audit with 10 URLs', async () => {
       const response = await request(app.getHttpServer())
         .post('/lighthouse/batch')
+        .set('X-API-Key', API_KEY)
         .send({ urls: TEST_URLS })
         .expect(201);
 
@@ -90,6 +95,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
       // Create batch
       const createResponse = await request(app.getHttpServer())
         .post('/lighthouse/batch')
+        .set('X-API-Key', API_KEY)
         .send({ urls: TEST_URLS })
         .expect(201);
 
@@ -108,6 +114,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
 
         const statusResponse = await request(app.getHttpServer())
           .get(`/lighthouse/batch/${batchId}`)
+          .set('X-API-Key', API_KEY)
           .expect(200);
 
         batchStatus = statusResponse.body;
@@ -148,7 +155,9 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
       // Verify individual job results
       const jobStatuses = await Promise.all(
         jobIds.map((jobId: string) =>
-          request(app.getHttpServer()).get(`/lighthouse/job/${jobId}`),
+          request(app.getHttpServer())
+            .get(`/lighthouse/job/${jobId}`)
+            .set('X-API-Key', API_KEY),
         ),
       );
 
@@ -178,9 +187,11 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
       const [batch1Response, batch2Response] = await Promise.all([
         request(app.getHttpServer())
           .post('/lighthouse/batch')
+          .set('X-API-Key', API_KEY)
           .send({ urls: batch1Urls }),
         request(app.getHttpServer())
           .post('/lighthouse/batch')
+          .set('X-API-Key', API_KEY)
           .send({ urls: batch2Urls }),
       ]);
 
@@ -195,6 +206,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
     it('should return queue statistics', async () => {
       const response = await request(app.getHttpServer())
         .get('/lighthouse/stats')
+        .set('X-API-Key', API_KEY)
         .expect(200);
 
       expect(response.body).toHaveProperty('waiting');
@@ -209,20 +221,30 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
     it('should return 404 for non-existent job', async () => {
       await request(app.getHttpServer())
         .get('/lighthouse/job/non-existent-id')
+        .set('X-API-Key', API_KEY)
         .expect(404);
     });
 
     it('should return 404 for non-existent batch', async () => {
       await request(app.getHttpServer())
         .get('/lighthouse/batch/non-existent-id')
+        .set('X-API-Key', API_KEY)
         .expect(404);
     });
 
     it('should validate URLs', async () => {
       await request(app.getHttpServer())
         .post('/lighthouse/audit')
+        .set('X-API-Key', API_KEY)
         .send({ url: 'not-a-valid-url' })
         .expect(400);
+    });
+
+    it('should reject requests without API key', async () => {
+      await request(app.getHttpServer())
+        .post('/lighthouse/audit')
+        .send({ url: 'https://example.com' })
+        .expect(401);
     });
   });
 });

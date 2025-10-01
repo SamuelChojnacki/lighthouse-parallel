@@ -29,7 +29,10 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - NODE_ENV=production
-      - WORKER_CONCURRENCY=10
+      - WORKER_CONCURRENCY=1
+      - API_KEY=wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=
+      - JWT_SECRET=test-jwt-secret-for-ci-only-do-not-use-in-production
+      - DASHBOARD_PASSWORD_HASH=$2b$10$imTl0aNFpkizoRrq7l4tzueGo/sMnG4oykWDaBOoxds2zY7LrY1ha
     depends_on:
       redis:
         condition: service_healthy
@@ -42,11 +45,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4'
-          memory: 8G
-        reservations:
           cpus: '2'
           memory: 4G
+        reservations:
+          cpus: '1'
+          memory: 2G
     networks:
       - lighthouse-network
     # Add shared memory for Chrome
