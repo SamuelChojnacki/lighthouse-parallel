@@ -70,7 +70,17 @@ export function useMetrics() {
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
-        const response = await fetch('/metrics')
+        // Fetch API key from config endpoint
+        const configResponse = await fetch('/config/public')
+        const config = await configResponse.json()
+        const apiKey = config.apiKey
+
+        const headers: HeadersInit = {}
+        if (apiKey) {
+          headers['X-API-Key'] = apiKey
+        }
+
+        const response = await fetch('/metrics', { headers })
 
         if (!response.ok) {
           throw new Error('Failed to fetch metrics')

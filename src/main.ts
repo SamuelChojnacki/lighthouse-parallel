@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe, Logger } from '@nestjs/common';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import helmet from 'helmet';
 import { AppModule } from './app.module';
 import { winstonConfig } from './common/logger/winston.config';
 
@@ -35,6 +36,9 @@ async function bootstrap() {
   // Enable shutdown hooks for graceful shutdown
   app.enableShutdownHooks();
 
+  // Security headers with Helmet
+  app.use(helmet());
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -43,20 +47,54 @@ async function bootstrap() {
     }),
   );
 
-  app.enableCors();
+  // Restrictive CORS - only allow specified origins
+  const corsOrigins = process.env.CORS_ORIGINS?.split(',') || [
+    'http://localhost:5173',
+  ];
+  app.enableCors({
+    origin: corsOrigins,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
+  });
 
-  // Swagger Configuration
+  // Swagger Configuration with API Key security
   const config = new DocumentBuilder()
     .setTitle('Lighthouse Parallel API')
-    .setDescription('Production-ready API for running Lighthouse audits in parallel. Process multiple website performance audits concurrently with configurable workers.')
+    .setDescription(
+      '🔒 **PROTECTED API** - All endpoints require an API Key.\n\n' +
+      'Production-ready API for running Lighthouse audits in parallel. ' +
+      'Process multiple website performance audits concurrently with configurable workers.\n\n' +
+      '**Authentication:** Click "Authorize" 🔓 below and enter your API Key.',
+    )
     .setVersion('1.0')
     .addTag('lighthouse', 'Lighthouse audit operations')
     .addTag('health', 'Health check endpoints')
     .addTag('metrics', 'Prometheus metrics')
+    .addTag('logs', 'Application logs')
+    .addApiKey(
+      {
+        type: 'apiKey',
+        name: 'X-API-Key',
+        in: 'header',
+        description: 'API Key for authentication',
+      },
+      'api-key',
+    )
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+
+  // Setup Swagger with custom options
+  // Note: Swagger UI itself is accessible, but ALL API endpoints require API Key
+  // This means the documentation is viewable, but endpoints cannot be tested without authentication
+  SwaggerModule.setup('api', app, document, {
+    swaggerOptions: {
+      persistAuthorization: true, // Keep API key in browser storage
+      docExpansion: 'none', // Collapse all sections by default
+    },
+    customSiteTitle: '🔒 Protected API Documentation',
+  });
 
   const port = process.env.PORT || 3000;
   await app.listen(port);

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { api } from '@/lib/api-client'
 
 export interface QueueStats {
   waiting: number
@@ -20,17 +21,7 @@ export function useStats() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch('/lighthouse/stats', {
-          headers: {
-            'Accept': 'application/json',
-          },
-        })
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch stats')
-        }
-
-        const data = await response.json()
+        const data = await api.get<QueueStats>('/lighthouse/stats')
         setStats(data)
         setError(null)
       } catch (err) {

@@ -1062,3 +1062,1027 @@
 {"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 00:50:54"}
 {"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 00:50:54"}
 {"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 0 jobs (0 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 00:50:54"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 00:57:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:57:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:57:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:57:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:57:31"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 00:57:31"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 00:57:32"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 00:57:32"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 00:57:32"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 00:57:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:57:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:57:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:57:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:57:47"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 00:57:47"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 00:57:47"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 00:57:47"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 00:57:47"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 00:58:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:04"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 00:58:04"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 00:58:04"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 00:58:04"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 00:58:04"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:06"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:09"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:12"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:15"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:18"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 00:58:19"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:19"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:19"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:19"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:19"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 00:58:19"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 00:58:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 00:58:19"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 00:58:19"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:21"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:24"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:27"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:30"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:33"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 00:58:34"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:34"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:34"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:34"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:34"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 00:58:34"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 00:58:35"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 00:58:35"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 00:58:35"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:36"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:39"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:42"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:45"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:48"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 00:58:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 00:58:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 00:58:50"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 00:58:50"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 00:58:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 00:58:50"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 00:58:50"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:51"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:54"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:58:57"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:00"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:03"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:06"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:09"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:12"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:15"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:18"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:21"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:24"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:27"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:30"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:33"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:36"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:39"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:42"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:45"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:48"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:51"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:54"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 00:59:57"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Starting automatic complete cleanup (hourly)...","timestamp":"2025-10-02 01:00:00"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 01:00:00"}
+{"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 01:00:00"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 0 jobs (0 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 01:00:00"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Automatic cleanup completed successfully","timestamp":"2025-10-02 01:00:00"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:00"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:03"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:06"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:09"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:12"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:15"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:18"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:21"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:24"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:27"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:30"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:33"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:36"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:39"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:42"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:45"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:48"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:51"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:54"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:00:57"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:00"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:07"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:10"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:13"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:16"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:19"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:22"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:25"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:28"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:31"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:34"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:37"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:40"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:43"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:46"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:49"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:52"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:55"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:01:58"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:01"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:04"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:07"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:10"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:13"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:16"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:19"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:22"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:25"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:28"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:31"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:34"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:37"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:40"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:43"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:46"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:49"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:49"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:49"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:52"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:55"}
+{"context":"ApiKeyGuard","level":"\u001b[31merror\u001b[39m","message":"API_KEY not configured in environment variables. Security is disabled!","stack":[null],"timestamp":"2025-10-02 01:02:58"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:03:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:03:01"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:03:01"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:01"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:04"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:07"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:10"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:13"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:15"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:16"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:19"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:22"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:25"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:03:28"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:03:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:03:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:03:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:03:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:03:30"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:03:30"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:04:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:04:01"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:04:01"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:01"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:04"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:07"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:10"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:13"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:16"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:19"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:22"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:25"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:28"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:31"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:34"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:37"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:40"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:43"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:46"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:49"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:52"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:55"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:04:58"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:01"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:04"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:07"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:10"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:13"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:16"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:19"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:24"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:25"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:28"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:32"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:34"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:38"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:41"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:44"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:47"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:50"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:53"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:56"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:05:59"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:06:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:01"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:06:01"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:06:02"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:06:02"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:06:02"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:05"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:08"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:11"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:14"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:17"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:06:18"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:18"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:18"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:18"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:18"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:06:18"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:06:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:06:19"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:06:19"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:20"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:23"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:26"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:29"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:32"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:35"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:38"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:41"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:44"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:47"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:06:49"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:49"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:49"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:49"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:49"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:06:49"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:06:50"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:06:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:06:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:06:50"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:06:50"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 01:06:50"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 01:06:50"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:06:50"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:53"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:56"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:06:59"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:02"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:07:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:07:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:07:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:07:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:07:02"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:07:02"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:07:03"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 01:07:03"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 01:07:03"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:07:03"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:05"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:08"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:11"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:14"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:17"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:20"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:23"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:25"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:26"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:29"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:32"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:35"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:38"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:07:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:07:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:07:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:07:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:07:40"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:07:40"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:07:41"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 01:07:41"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 01:07:41"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:07:41"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:41"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:44"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:47"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:50"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:53"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:56"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:07:59"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:02"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:05"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:08"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:11"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:14"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:17"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:20"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:23"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:26"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:29"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:32"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:35"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:38"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:41"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:44"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:47"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:50"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:53"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:56"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:08:59"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:00"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:03"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:06"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:09"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:09:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:09:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:09:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:09:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:09:12"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:09:12"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:09:12"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 01:09:12"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 01:09:12"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:09:12"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:15"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:18"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:21"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:24"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:27"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:30"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 01:09:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:09:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:09:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 01:09:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 01:09:30"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 01:09:30"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:09:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 01:09:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 01:09:31"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:09:31"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:33"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:36"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:39"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:42"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:45"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:48"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:51"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:54"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:09:57"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:00"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:03"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:06"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:09"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:12"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:15"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:18"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:21"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:24"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:27"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:30"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:33"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:34"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:37"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:40"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:43"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:46"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:49"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:52"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:55"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:10:58"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:01"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:04"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:07"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:10"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:13"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:16"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:19"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:22"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:25"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:28"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:31"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:34"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:37"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:38"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:41"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:44"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:47"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:50"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:53"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:56"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:11:59"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:02"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:05"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:08"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:11"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:14"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:17"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:20"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:23"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 5","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 01:12:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 01:12:31"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 01:12:31"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 01:12:31"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:32"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:35"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:38"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:41"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:44"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:47"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:50"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:53"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:56"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:12:59"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:13:02"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /lighthouse/stats - Missing API Key","timestamp":"2025-10-02 01:13:05"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 01:14:55"}
+{"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 01:14:55"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 0 jobs (0 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 01:14:55"}

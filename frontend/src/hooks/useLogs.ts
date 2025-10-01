@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { api } from '@/lib/api-client'
 
 export interface LogEntry {
   timestamp: string
@@ -16,13 +17,9 @@ export function useLogs(limit = 100) {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const response = await fetch(`/logs?limit=${limit}`)
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch logs')
-        }
-
-        const data = await response.json()
+        const data = await api.get<LogEntry[]>('/logs', {
+          params: { limit },
+        })
         setLogs(data)
         setError(null)
       } catch (err) {

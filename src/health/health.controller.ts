@@ -6,11 +6,13 @@ import {
   DiskHealthIndicator,
 } from '@nestjs/terminus';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { Public } from '../auth/decorators/public.decorator';
 import { RedisHealthIndicator } from './indicators/redis.health';
 import { QueueHealthIndicator } from './indicators/queue.health';
 
 @ApiTags('health')
 @Controller('health')
+@Public()
 export class HealthController {
   constructor(
     private health: HealthCheckService,

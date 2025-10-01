@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useLogs } from "@/hooks/useLogs"
 import { useBatches } from "@/hooks/useBatches"
+import { api } from "@/lib/api-client"
 
 type BadgeVariant = "default" | "destructive" | "outline" | "secondary"
 
@@ -36,10 +37,12 @@ export function Admin() {
     setCleanupLoading(true)
     setCleanupResult(null)
     try {
-      const response = await fetch('/lighthouse/cleanup', {
-        method: 'POST',
-      })
-      const data = await response.json()
+      const data = await api.post<{
+        cleaned: number
+        completedCleaned: number
+        failedCleaned: number
+      }>('/lighthouse/cleanup')
+
       setCleanupResult(
         `✅ Complete cleanup done! Removed ${data.cleaned} total jobs (${data.completedCleaned} completed, ${data.failedCleaned} failed) + all batches`
       )

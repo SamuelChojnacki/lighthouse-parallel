@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { api } from '@/lib/api-client'
 
 export interface Batch {
   batchId: string
@@ -19,13 +20,7 @@ export function useBatches() {
   useEffect(() => {
     const fetchBatches = async () => {
       try {
-        const response = await fetch('/lighthouse/batches')
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch batches')
-        }
-
-        const data = await response.json()
+        const data = await api.get<Batch[]>('/lighthouse/batches')
         setBatches(data)
         setError(null)
       } catch (err) {
