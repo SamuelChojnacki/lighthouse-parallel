@@ -2388,3 +2388,669 @@
 {"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 02:00:00"}
 {"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 0 jobs (0 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 02:00:00"}
 {"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Automatic cleanup completed successfully","timestamp":"2025-10-02 02:00:00"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 10","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 02:15:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 02:15:07"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 02:15:07"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /metrics - Missing API Key","timestamp":"2025-10-02 02:15:10"}
+{"context":"ExceptionsHandler","error":{},"level":"\u001b[31merror\u001b[39m","message":"Missing parameter name at 5: https://git.new/pathToRegexpError","stack":["TypeError: Missing parameter name at 5: https://git.new/pathToRegexpError\n    at name (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:73:19)\n    at lexer (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:91:27)\n    at lexer.next (<anonymous>)\n    at Iter.peek (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:106:38)\n    at Iter.tryConsume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:112:28)\n    at Iter.text (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:128:30)\n    at consume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:152:29)\n    at parse (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:183:20)\n    at /Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:294:74\n    at Array.map (<anonymous>)"],"timestamp":"2025-10-02 02:15:10"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /metrics - Missing API Key","timestamp":"2025-10-02 02:15:12"}
+{"context":"ExceptionsHandler","error":{},"level":"\u001b[31merror\u001b[39m","message":"Missing parameter name at 5: https://git.new/pathToRegexpError","stack":["TypeError: Missing parameter name at 5: https://git.new/pathToRegexpError\n    at name (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:73:19)\n    at lexer (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:91:27)\n    at lexer.next (<anonymous>)\n    at Iter.peek (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:106:38)\n    at Iter.tryConsume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:112:28)\n    at Iter.text (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:128:30)\n    at consume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:152:29)\n    at parse (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:183:20)\n    at /Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:294:74\n    at Array.map (<anonymous>)"],"timestamp":"2025-10-02 02:15:12"}
+{"context":"ApiKeyGuard","level":"\u001b[33mwarn\u001b[39m","message":"Unauthorized access attempt to GET /metrics - Missing API Key","timestamp":"2025-10-02 02:15:12"}
+{"context":"ExceptionsHandler","error":{},"level":"\u001b[31merror\u001b[39m","message":"Missing parameter name at 5: https://git.new/pathToRegexpError","stack":["TypeError: Missing parameter name at 5: https://git.new/pathToRegexpError\n    at name (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:73:19)\n    at lexer (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:91:27)\n    at lexer.next (<anonymous>)\n    at Iter.peek (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:106:38)\n    at Iter.tryConsume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:112:28)\n    at Iter.text (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:128:30)\n    at consume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:152:29)\n    at parse (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:183:20)\n    at /Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:294:74\n    at Array.map (<anonymous>)"],"timestamp":"2025-10-02 02:15:13"}
+{"context":"ExceptionsHandler","error":{},"level":"\u001b[31merror\u001b[39m","message":"Missing parameter name at 5: https://git.new/pathToRegexpError","stack":["TypeError: Missing parameter name at 5: https://git.new/pathToRegexpError\n    at name (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:73:19)\n    at lexer (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:91:27)\n    at lexer.next (<anonymous>)\n    at Iter.peek (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:106:38)\n    at Iter.tryConsume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:112:28)\n    at Iter.text (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:128:30)\n    at consume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:152:29)\n    at parse (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:183:20)\n    at /Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:294:74\n    at Array.map (<anonymous>)"],"timestamp":"2025-10-02 02:15:17"}
+{"context":"ExceptionsHandler","error":{},"level":"\u001b[31merror\u001b[39m","message":"Missing parameter name at 5: https://git.new/pathToRegexpError","stack":["TypeError: Missing parameter name at 5: https://git.new/pathToRegexpError\n    at name (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:73:19)\n    at lexer (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:91:27)\n    at lexer.next (<anonymous>)\n    at Iter.peek (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:106:38)\n    at Iter.tryConsume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:112:28)\n    at Iter.text (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:128:30)\n    at consume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:152:29)\n    at parse (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:183:20)\n    at /Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:294:74\n    at Array.map (<anonymous>)"],"timestamp":"2025-10-02 02:15:18"}
+{"context":"ExceptionsHandler","error":{},"level":"\u001b[31merror\u001b[39m","message":"Missing parameter name at 5: https://git.new/pathToRegexpError","stack":["TypeError: Missing parameter name at 5: https://git.new/pathToRegexpError\n    at name (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:73:19)\n    at lexer (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:91:27)\n    at lexer.next (<anonymous>)\n    at Iter.peek (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:106:38)\n    at Iter.tryConsume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:112:28)\n    at Iter.text (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:128:30)\n    at consume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:152:29)\n    at parse (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:183:20)\n    at /Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:294:74\n    at Array.map (<anonymous>)"],"timestamp":"2025-10-02 02:15:21"}
+{"context":"ExceptionsHandler","error":{},"level":"\u001b[31merror\u001b[39m","message":"Missing parameter name at 5: https://git.new/pathToRegexpError","stack":["TypeError: Missing parameter name at 5: https://git.new/pathToRegexpError\n    at name (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:73:19)\n    at lexer (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:91:27)\n    at lexer.next (<anonymous>)\n    at Iter.peek (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:106:38)\n    at Iter.tryConsume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:112:28)\n    at Iter.text (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:128:30)\n    at consume (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:152:29)\n    at parse (/Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:183:20)\n    at /Users/samuel/Desktop/lighthouse-parallele/node_modules/path-to-regexp/dist/index.js:294:74\n    at Array.map (<anonymous>)"],"timestamp":"2025-10-02 02:15:21"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGINT, starting graceful shutdown...","timestamp":"2025-10-02 02:15:39"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 02:15:39"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 02:15:39"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 02:15:39"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 02:15:39"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGINT, starting graceful shutdown...","timestamp":"2025-10-02 02:15:39"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 02:15:39"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 02:15:39"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 02:15:39"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 10","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 02:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 02:15:45"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 02:15:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job ead53aed-feec-44c8-aa3a-34d9a1b17b1d is now active","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: ead53aed-feec-44c8-aa3a-34d9a1b17b1d) - Active jobs: 1","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 5587a51b-6507-4d85-9c8e-543ecf9f924f is now active","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 5587a51b-6507-4d85-9c8e-543ecf9f924f) - Active jobs: 2","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job bb48e1b7-2be6-40c8-b2d1-bf768ca9a302 is now active","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: bb48e1b7-2be6-40c8-b2d1-bf768ca9a302) - Active jobs: 3","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 2849de81-bcec-4eaa-bf84-fb76716a16fa is now active","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: 2849de81-bcec-4eaa-bf84-fb76716a16fa) - Active jobs: 4","timestamp":"2025-10-02 02:16:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 8aa2dcb9-b67e-47fd-9d06-7ddc2e503050 is now active","timestamp":"2025-10-02 02:16:41"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: 8aa2dcb9-b67e-47fd-9d06-7ddc2e503050) - Active jobs: 5","timestamp":"2025-10-02 02:16:41"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 8326ms","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 8324ms","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 3","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job ead53aed-feec-44c8-aa3a-34d9a1b17b1d completed successfully","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 19bdb2b0-4ede-47a5-9c7d-7e779f532fa6 is now active","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.linkedin.com (Job: 19bdb2b0-4ede-47a5-9c7d-7e779f532fa6) - Active jobs: 4","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 5587a51b-6507-4d85-9c8e-543ecf9f924f completed successfully","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 32838ebd-6616-498b-b98e-cd497c6134e6 is now active","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 32838ebd-6616-498b-b98e-cd497c6134e6) - Active jobs: 5","timestamp":"2025-10-02 02:16:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 15800ms","timestamp":"2025-10-02 02:16:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 4","timestamp":"2025-10-02 02:16:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job bb48e1b7-2be6-40c8-b2d1-bf768ca9a302 completed successfully","timestamp":"2025-10-02 02:16:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job d001d403-c63a-4bd4-b954-4b1ead887e35 is now active","timestamp":"2025-10-02 02:16:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: d001d403-c63a-4bd4-b954-4b1ead887e35) - Active jobs: 5","timestamp":"2025-10-02 02:16:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 7671ms","timestamp":"2025-10-02 02:16:59"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:16:59"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 32838ebd-6616-498b-b98e-cd497c6134e6 completed successfully","timestamp":"2025-10-02 02:16:59"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job dea2e3c0-ab6b-4516-a50b-f79ab716eea1 is now active","timestamp":"2025-10-02 02:16:59"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: dea2e3c0-ab6b-4516-a50b-f79ab716eea1) - Active jobs: 5","timestamp":"2025-10-02 02:16:59"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.linkedin.com in 20518ms","timestamp":"2025-10-02 02:17:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.linkedin.com - Active jobs: 4","timestamp":"2025-10-02 02:17:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 19bdb2b0-4ede-47a5-9c7d-7e779f532fa6 completed successfully","timestamp":"2025-10-02 02:17:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 1b98432a-267f-4532-9eae-fbc04a399c0f is now active","timestamp":"2025-10-02 02:17:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.linkedin.com (Job: 1b98432a-267f-4532-9eae-fbc04a399c0f) - Active jobs: 5","timestamp":"2025-10-02 02:17:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 30927ms","timestamp":"2025-10-02 02:17:13"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 4","timestamp":"2025-10-02 02:17:13"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 2849de81-bcec-4eaa-bf84-fb76716a16fa completed successfully","timestamp":"2025-10-02 02:17:13"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://stackoverflow.com in 17902ms","timestamp":"2025-10-02 02:17:18"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://stackoverflow.com - Active jobs: 3","timestamp":"2025-10-02 02:17:18"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job dea2e3c0-ab6b-4516-a50b-f79ab716eea1 completed successfully","timestamp":"2025-10-02 02:17:18"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://stackoverflow.com in 37028ms","timestamp":"2025-10-02 02:17:21"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://stackoverflow.com - Active jobs: 2","timestamp":"2025-10-02 02:17:21"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 8aa2dcb9-b67e-47fd-9d06-7ddc2e503050 completed successfully","timestamp":"2025-10-02 02:17:21"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 25796ms","timestamp":"2025-10-02 02:17:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 1","timestamp":"2025-10-02 02:17:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job d001d403-c63a-4bd4-b954-4b1ead887e35 completed successfully","timestamp":"2025-10-02 02:17:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.linkedin.com in 15863ms","timestamp":"2025-10-02 02:17:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.linkedin.com - Active jobs: 0","timestamp":"2025-10-02 02:17:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 1b98432a-267f-4532-9eae-fbc04a399c0f completed successfully","timestamp":"2025-10-02 02:17:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e8797824-0099-4c13-adf7-30b72c0486c5 is now active","timestamp":"2025-10-02 02:17:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: e8797824-0099-4c13-adf7-30b72c0486c5) - Active jobs: 1","timestamp":"2025-10-02 02:17:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 61467b42-ad52-4097-ac65-7ea8f853a8f9 is now active","timestamp":"2025-10-02 02:17:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: 61467b42-ad52-4097-ac65-7ea8f853a8f9) - Active jobs: 2","timestamp":"2025-10-02 02:17:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4bd51aec-54fc-4e34-858a-cb239a5748f9 is now active","timestamp":"2025-10-02 02:17:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: 4bd51aec-54fc-4e34-858a-cb239a5748f9) - Active jobs: 3","timestamp":"2025-10-02 02:17:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 3e19d18d-2fa2-408a-8d3f-07822ef2187c is now active","timestamp":"2025-10-02 02:17:38"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.reddit.com (Job: 3e19d18d-2fa2-408a-8d3f-07822ef2187c) - Active jobs: 4","timestamp":"2025-10-02 02:17:38"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 55475674-fab3-4a73-b0ef-af9d392b9b76 is now active","timestamp":"2025-10-02 02:17:38"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: 55475674-fab3-4a73-b0ef-af9d392b9b76) - Active jobs: 5","timestamp":"2025-10-02 02:17:38"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 8117ms","timestamp":"2025-10-02 02:17:46"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:17:46"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e8797824-0099-4c13-adf7-30b72c0486c5 completed successfully","timestamp":"2025-10-02 02:17:46"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 12074ms","timestamp":"2025-10-02 02:17:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 3","timestamp":"2025-10-02 02:17:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4bd51aec-54fc-4e34-858a-cb239a5748f9 completed successfully","timestamp":"2025-10-02 02:17:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 12745ms","timestamp":"2025-10-02 02:17:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 2","timestamp":"2025-10-02 02:17:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 61467b42-ad52-4097-ac65-7ea8f853a8f9 completed successfully","timestamp":"2025-10-02 02:17:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://twitter.com in 15443ms","timestamp":"2025-10-02 02:17:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://twitter.com - Active jobs: 1","timestamp":"2025-10-02 02:17:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 55475674-fab3-4a73-b0ef-af9d392b9b76 completed successfully","timestamp":"2025-10-02 02:17:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7acfc255-8ada-40b8-8de4-beaef476912f is now active","timestamp":"2025-10-02 02:18:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 7acfc255-8ada-40b8-8de4-beaef476912f) - Active jobs: 2","timestamp":"2025-10-02 02:18:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 2ffc5600-d778-47c0-82cd-85750c6fe5e1 is now active","timestamp":"2025-10-02 02:18:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: 2ffc5600-d778-47c0-82cd-85750c6fe5e1) - Active jobs: 3","timestamp":"2025-10-02 02:18:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job a12a6446-613e-402a-8158-94da3b5d3df7 is now active","timestamp":"2025-10-02 02:18:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: a12a6446-613e-402a-8158-94da3b5d3df7) - Active jobs: 4","timestamp":"2025-10-02 02:18:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 59bebde1-1e93-4c30-888a-3b813ee734dc is now active","timestamp":"2025-10-02 02:18:28"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: 59bebde1-1e93-4c30-888a-3b813ee734dc) - Active jobs: 5","timestamp":"2025-10-02 02:18:28"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 8052ms","timestamp":"2025-10-02 02:18:36"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:18:36"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7acfc255-8ada-40b8-8de4-beaef476912f completed successfully","timestamp":"2025-10-02 02:18:36"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7b12536f-4b3c-41a1-b66a-f0d0637d127c is now active","timestamp":"2025-10-02 02:18:36"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.reddit.com (Job: 7b12536f-4b3c-41a1-b66a-f0d0637d127c) - Active jobs: 5","timestamp":"2025-10-02 02:18:36"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.reddit.com in 63835ms","timestamp":"2025-10-02 02:18:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.reddit.com - Active jobs: 4","timestamp":"2025-10-02 02:18:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 3e19d18d-2fa2-408a-8d3f-07822ef2187c completed successfully","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c34deddf-30d7-469c-9a5d-49dee7776ab7 is now active","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: c34deddf-30d7-469c-9a5d-49dee7776ab7) - Active jobs: 5","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 17110ms","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 4","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 2ffc5600-d778-47c0-82cd-85750c6fe5e1 completed successfully","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 6a42b908-878c-4e5a-82ce-4809ed19dda3 is now active","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: 6a42b908-878c-4e5a-82ce-4809ed19dda3) - Active jobs: 5","timestamp":"2025-10-02 02:18:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://stackoverflow.com in 17941ms","timestamp":"2025-10-02 02:18:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://stackoverflow.com - Active jobs: 4","timestamp":"2025-10-02 02:18:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 59bebde1-1e93-4c30-888a-3b813ee734dc completed successfully","timestamp":"2025-10-02 02:18:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 590a7c7f-ef50-4d45-8de0-972fa93ddb48 is now active","timestamp":"2025-10-02 02:18:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.npmjs.com (Job: 590a7c7f-ef50-4d45-8de0-972fa93ddb48) - Active jobs: 5","timestamp":"2025-10-02 02:18:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 23806ms","timestamp":"2025-10-02 02:18:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 4","timestamp":"2025-10-02 02:18:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job a12a6446-613e-402a-8158-94da3b5d3df7 completed successfully","timestamp":"2025-10-02 02:18:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c55f7325-991c-4a00-bb2b-7367cf1895de is now active","timestamp":"2025-10-02 02:18:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: c55f7325-991c-4a00-bb2b-7367cf1895de) - Active jobs: 5","timestamp":"2025-10-02 02:18:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 11577ms","timestamp":"2025-10-02 02:18:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 4","timestamp":"2025-10-02 02:18:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c34deddf-30d7-469c-9a5d-49dee7776ab7 completed successfully","timestamp":"2025-10-02 02:18:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.npmjs.com in 10697ms","timestamp":"2025-10-02 02:19:00"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.npmjs.com - Active jobs: 3","timestamp":"2025-10-02 02:19:00"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 590a7c7f-ef50-4d45-8de0-972fa93ddb48 completed successfully","timestamp":"2025-10-02 02:19:00"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.reddit.com in 24749ms","timestamp":"2025-10-02 02:19:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.reddit.com - Active jobs: 2","timestamp":"2025-10-02 02:19:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7b12536f-4b3c-41a1-b66a-f0d0637d127c completed successfully","timestamp":"2025-10-02 02:19:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 11060ms","timestamp":"2025-10-02 02:19:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 1","timestamp":"2025-10-02 02:19:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c55f7325-991c-4a00-bb2b-7367cf1895de completed successfully","timestamp":"2025-10-02 02:19:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 26117ms","timestamp":"2025-10-02 02:19:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 0","timestamp":"2025-10-02 02:19:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 6a42b908-878c-4e5a-82ce-4809ed19dda3 completed successfully","timestamp":"2025-10-02 02:19:12"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 922b8b85-aee1-47ae-8fb2-6a1116c837a5 is now active","timestamp":"2025-10-02 02:19:23"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 922b8b85-aee1-47ae-8fb2-6a1116c837a5) - Active jobs: 1","timestamp":"2025-10-02 02:19:23"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c84f082d-2e43-44b0-89db-8afad36f5395 is now active","timestamp":"2025-10-02 02:19:23"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: c84f082d-2e43-44b0-89db-8afad36f5395) - Active jobs: 2","timestamp":"2025-10-02 02:19:23"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c70e059a-fd81-432d-a292-93da90cb4b04 is now active","timestamp":"2025-10-02 02:19:23"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: c70e059a-fd81-432d-a292-93da90cb4b04) - Active jobs: 3","timestamp":"2025-10-02 02:19:23"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 0d37e949-811f-430d-be9f-4b20fb2594b8 is now active","timestamp":"2025-10-02 02:19:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.reddit.com (Job: 0d37e949-811f-430d-be9f-4b20fb2594b8) - Active jobs: 4","timestamp":"2025-10-02 02:19:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job a8fbf6c5-7710-4d64-87d3-085b1257f95f is now active","timestamp":"2025-10-02 02:19:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: a8fbf6c5-7710-4d64-87d3-085b1257f95f) - Active jobs: 5","timestamp":"2025-10-02 02:19:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 8295ms","timestamp":"2025-10-02 02:19:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:19:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 922b8b85-aee1-47ae-8fb2-6a1116c837a5 completed successfully","timestamp":"2025-10-02 02:19:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 12577ms","timestamp":"2025-10-02 02:19:36"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 3","timestamp":"2025-10-02 02:19:36"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c84f082d-2e43-44b0-89db-8afad36f5395 completed successfully","timestamp":"2025-10-02 02:19:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://twitter.com in 21017ms","timestamp":"2025-10-02 02:19:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://twitter.com - Active jobs: 2","timestamp":"2025-10-02 02:19:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job a8fbf6c5-7710-4d64-87d3-085b1257f95f completed successfully","timestamp":"2025-10-02 02:19:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 26336ms","timestamp":"2025-10-02 02:19:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 1","timestamp":"2025-10-02 02:19:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job c70e059a-fd81-432d-a292-93da90cb4b04 completed successfully","timestamp":"2025-10-02 02:19:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.reddit.com in 34834ms","timestamp":"2025-10-02 02:20:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.reddit.com - Active jobs: 0","timestamp":"2025-10-02 02:20:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 0d37e949-811f-430d-be9f-4b20fb2594b8 completed successfully","timestamp":"2025-10-02 02:20:01"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job ca403cf9-a6f4-4c8c-bd5e-386b0b42dcfe is now active","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: ca403cf9-a6f4-4c8c-bd5e-386b0b42dcfe) - Active jobs: 1","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7cdaaa84-8f42-4966-a151-157eb45dcf0a is now active","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 7cdaaa84-8f42-4966-a151-157eb45dcf0a) - Active jobs: 2","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job a901cc36-c8fa-4e3a-9e08-82743d5c46b6 is now active","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: a901cc36-c8fa-4e3a-9e08-82743d5c46b6) - Active jobs: 3","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f3e048c5-a8ed-44a9-b51e-6a490e4d0196 is now active","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: f3e048c5-a8ed-44a9-b51e-6a490e4d0196) - Active jobs: 4","timestamp":"2025-10-02 02:20:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7b966371-6ce4-4d86-9679-ea82de1d72ae is now active","timestamp":"2025-10-02 02:20:43"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: 7b966371-6ce4-4d86-9679-ea82de1d72ae) - Active jobs: 5","timestamp":"2025-10-02 02:20:43"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 8235ms","timestamp":"2025-10-02 02:20:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:20:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job ca403cf9-a6f4-4c8c-bd5e-386b0b42dcfe completed successfully","timestamp":"2025-10-02 02:20:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job db9077a4-84db-47b4-b5fb-2ca388763746 is now active","timestamp":"2025-10-02 02:20:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: db9077a4-84db-47b4-b5fb-2ca388763746) - Active jobs: 5","timestamp":"2025-10-02 02:20:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 14342ms","timestamp":"2025-10-02 02:20:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 4","timestamp":"2025-10-02 02:20:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job a901cc36-c8fa-4e3a-9e08-82743d5c46b6 completed successfully","timestamp":"2025-10-02 02:20:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 8946b61e-9fd6-4901-a23f-84488401b872 is now active","timestamp":"2025-10-02 02:20:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: 8946b61e-9fd6-4901-a23f-84488401b872) - Active jobs: 5","timestamp":"2025-10-02 02:20:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 27659ms","timestamp":"2025-10-02 02:21:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 4","timestamp":"2025-10-02 02:21:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 8946b61e-9fd6-4901-a23f-84488401b872 completed successfully","timestamp":"2025-10-02 02:21:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job aeb68ea2-c58c-4c88-a15e-e3f45c50c94e is now active","timestamp":"2025-10-02 02:21:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: aeb68ea2-c58c-4c88-a15e-e3f45c50c94e) - Active jobs: 5","timestamp":"2025-10-02 02:21:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 53605ms","timestamp":"2025-10-02 02:21:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:21:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7cdaaa84-8f42-4966-a151-157eb45dcf0a completed successfully","timestamp":"2025-10-02 02:21:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job b5d55eb8-fe54-4347-ae74-a48d78c73af5 is now active","timestamp":"2025-10-02 02:21:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: b5d55eb8-fe54-4347-ae74-a48d78c73af5) - Active jobs: 5","timestamp":"2025-10-02 02:21:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://stackoverflow.com in 58458ms","timestamp":"2025-10-02 02:21:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://stackoverflow.com - Active jobs: 4","timestamp":"2025-10-02 02:21:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7b966371-6ce4-4d86-9679-ea82de1d72ae completed successfully","timestamp":"2025-10-02 02:21:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 62654ms","timestamp":"2025-10-02 02:21:46"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 3","timestamp":"2025-10-02 02:21:46"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f3e048c5-a8ed-44a9-b51e-6a490e4d0196 completed successfully","timestamp":"2025-10-02 02:21:46"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://twitter.com in 54162ms","timestamp":"2025-10-02 02:21:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://twitter.com - Active jobs: 2","timestamp":"2025-10-02 02:21:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job db9077a4-84db-47b4-b5fb-2ca388763746 completed successfully","timestamp":"2025-10-02 02:21:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 20664ms","timestamp":"2025-10-02 02:21:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 1","timestamp":"2025-10-02 02:21:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job aeb68ea2-c58c-4c88-a15e-e3f45c50c94e completed successfully","timestamp":"2025-10-02 02:21:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://twitter.com in 30866ms","timestamp":"2025-10-02 02:22:09"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://twitter.com - Active jobs: 0","timestamp":"2025-10-02 02:22:09"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job b5d55eb8-fe54-4347-ae74-a48d78c73af5 completed successfully","timestamp":"2025-10-02 02:22:09"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 816b07ff-b80c-4f8c-bb6e-db2379e02ae4 is now active","timestamp":"2025-10-02 02:22:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://nestjs.com (Job: 816b07ff-b80c-4f8c-bb6e-db2379e02ae4) - Active jobs: 1","timestamp":"2025-10-02 02:22:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 785acaa6-d927-400c-8789-e491aac89484 is now active","timestamp":"2025-10-02 02:22:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: 785acaa6-d927-400c-8789-e491aac89484) - Active jobs: 2","timestamp":"2025-10-02 02:22:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f5414561-dc6d-46ed-ab8d-3806ecd6bc91 is now active","timestamp":"2025-10-02 02:22:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: f5414561-dc6d-46ed-ab8d-3806ecd6bc91) - Active jobs: 3","timestamp":"2025-10-02 02:22:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 1497ca96-f306-4959-af06-e301bd70e844 is now active","timestamp":"2025-10-02 02:22:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: 1497ca96-f306-4959-af06-e301bd70e844) - Active jobs: 4","timestamp":"2025-10-02 02:22:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job cfdc55d8-c38b-4516-ae26-82376c181af7 is now active","timestamp":"2025-10-02 02:22:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.linkedin.com (Job: cfdc55d8-c38b-4516-ae26-82376c181af7) - Active jobs: 5","timestamp":"2025-10-02 02:22:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.linkedin.com in 21776ms","timestamp":"2025-10-02 02:22:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.linkedin.com - Active jobs: 4","timestamp":"2025-10-02 02:22:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job cfdc55d8-c38b-4516-ae26-82376c181af7 completed successfully","timestamp":"2025-10-02 02:22:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://twitter.com in 53869ms","timestamp":"2025-10-02 02:23:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://twitter.com - Active jobs: 3","timestamp":"2025-10-02 02:23:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 1497ca96-f306-4959-af06-e301bd70e844 completed successfully","timestamp":"2025-10-02 02:23:27"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://stackoverflow.com in 55584ms","timestamp":"2025-10-02 02:23:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://stackoverflow.com - Active jobs: 2","timestamp":"2025-10-02 02:23:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f5414561-dc6d-46ed-ab8d-3806ecd6bc91 completed successfully","timestamp":"2025-10-02 02:23:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 68254ms","timestamp":"2025-10-02 02:23:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 1","timestamp":"2025-10-02 02:23:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 785acaa6-d927-400c-8789-e491aac89484 completed successfully","timestamp":"2025-10-02 02:23:40"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://nestjs.com in 70264ms","timestamp":"2025-10-02 02:23:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://nestjs.com - Active jobs: 0","timestamp":"2025-10-02 02:23:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 816b07ff-b80c-4f8c-bb6e-db2379e02ae4 completed successfully","timestamp":"2025-10-02 02:23:42"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 5eefb276-d063-4c7d-a4d5-aee53fa3765f is now active","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 5eefb276-d063-4c7d-a4d5-aee53fa3765f) - Active jobs: 1","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f1623adb-5a28-4c12-be54-b279486f8c41 is now active","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: f1623adb-5a28-4c12-be54-b279486f8c41) - Active jobs: 2","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job d59f8186-8098-4987-8644-99c1c64add1c is now active","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: d59f8186-8098-4987-8644-99c1c64add1c) - Active jobs: 3","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 87224e3a-7412-4c51-8971-a00752763f1e is now active","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.npmjs.com (Job: 87224e3a-7412-4c51-8971-a00752763f1e) - Active jobs: 4","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 191e3e12-2857-471c-b34c-69fa0769aef2 is now active","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: 191e3e12-2857-471c-b34c-69fa0769aef2) - Active jobs: 5","timestamp":"2025-10-02 02:27:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 34254ms","timestamp":"2025-10-02 02:28:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 4","timestamp":"2025-10-02 02:28:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 5eefb276-d063-4c7d-a4d5-aee53fa3765f completed successfully","timestamp":"2025-10-02 02:28:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 3fe5f20d-fb5c-4850-b434-fd6670911e3e is now active","timestamp":"2025-10-02 02:28:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://nestjs.com (Job: 3fe5f20d-fb5c-4850-b434-fd6670911e3e) - Active jobs: 5","timestamp":"2025-10-02 02:28:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.npmjs.com in 36924ms","timestamp":"2025-10-02 02:28:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.npmjs.com - Active jobs: 4","timestamp":"2025-10-02 02:28:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 87224e3a-7412-4c51-8971-a00752763f1e completed successfully","timestamp":"2025-10-02 02:28:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job ba5fef32-c970-4d6f-a02e-10b8e85b33e6 is now active","timestamp":"2025-10-02 02:28:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: ba5fef32-c970-4d6f-a02e-10b8e85b33e6) - Active jobs: 5","timestamp":"2025-10-02 02:28:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 02:28:48"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 10","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 02:31:52"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 02:31:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Worker concurrency set to: 10","timestamp":"2025-10-02 02:31:52"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 02:31:52"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 02:32:00"}
+{"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 02:32:00"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 125 jobs (125 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 02:32:00"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 02:32:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 02:32:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 02:32:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 02:32:53"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 02:32:53"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 02:32:53"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 8","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 02:32:54"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 02:32:54"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Worker concurrency set to: 8","timestamp":"2025-10-02 02:32:54"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 02:32:54"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 6555b805-f436-440d-9c54-9fc0ee691cc9 is now active","timestamp":"2025-10-02 02:32:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: 6555b805-f436-440d-9c54-9fc0ee691cc9) - Active jobs: 1","timestamp":"2025-10-02 02:32:58"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 02:33:08"}
+{"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 02:33:08"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 2 jobs (2 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 02:33:08"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4f05731c-831c-423f-8e91-381a8a0267cc is now active","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 4f05731c-831c-423f-8e91-381a8a0267cc) - Active jobs: 2","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 17dc2c16-97df-4643-9c3d-6152b6caec9e is now active","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 17dc2c16-97df-4643-9c3d-6152b6caec9e) - Active jobs: 3","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f0502dc3-3dfd-4f46-9ac5-ddf03927f386 is now active","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: f0502dc3-3dfd-4f46-9ac5-ddf03927f386) - Active jobs: 4","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f86d8b03-7d26-4894-9b08-03c2709589df is now active","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.npmjs.com (Job: f86d8b03-7d26-4894-9b08-03c2709589df) - Active jobs: 5","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4a03a482-b165-40d6-92ab-62f07a1e1556 is now active","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://nestjs.com (Job: 4a03a482-b165-40d6-92ab-62f07a1e1556) - Active jobs: 6","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 568df1cb-e0ad-49c2-88b9-392dda3711fc is now active","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: 568df1cb-e0ad-49c2-88b9-392dda3711fc) - Active jobs: 7","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 026cca9a-def8-4cc4-a508-478affa2cb8a is now active","timestamp":"2025-10-02 02:33:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: 026cca9a-def8-4cc4-a508-478affa2cb8a) - Active jobs: 8","timestamp":"2025-10-02 02:33:44"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 8","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 02:36:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Worker concurrency set to: 8","timestamp":"2025-10-02 02:36:37"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 44a04969-9c94-496a-8b96-233da6ba75e6 is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 44a04969-9c94-496a-8b96-233da6ba75e6) - Active jobs: 1","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f079d0e5-8df1-456c-8f8e-9526d7d42998 is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: f079d0e5-8df1-456c-8f8e-9526d7d42998) - Active jobs: 2","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 83220de7-f2e5-4beb-81ac-0156ac59b317 is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: 83220de7-f2e5-4beb-81ac-0156ac59b317) - Active jobs: 3","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 30ffd560-d943-4924-9d7c-c82c0c1e12cb is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: 30ffd560-d943-4924-9d7c-c82c0c1e12cb) - Active jobs: 4","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job d80a2256-6153-46de-abbf-3cbc3fe18cf0 is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.reddit.com (Job: d80a2256-6153-46de-abbf-3cbc3fe18cf0) - Active jobs: 5","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 38eef44b-cc3c-4b8f-8bab-0e72369ea18b is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: 38eef44b-cc3c-4b8f-8bab-0e72369ea18b) - Active jobs: 6","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e1462c9d-940f-4a6c-9dcd-cd7b216eb407 is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.linkedin.com (Job: e1462c9d-940f-4a6c-9dcd-cd7b216eb407) - Active jobs: 7","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 79366841-110b-412a-b9fe-79c7d7cfbc7e is now active","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 79366841-110b-412a-b9fe-79c7d7cfbc7e) - Active jobs: 8","timestamp":"2025-10-02 02:36:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 7942ms","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 7","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 79366841-110b-412a-b9fe-79c7d7cfbc7e completed successfully","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 9214bd6e-6a59-4366-b23f-f817694a8610 is now active","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: 9214bd6e-6a59-4366-b23f-f817694a8610) - Active jobs: 8","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 8188ms","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 7","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 44a04969-9c94-496a-8b96-233da6ba75e6 completed successfully","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job ee36c7b4-44c1-4c3e-9c77-bf6b8940644a is now active","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.npmjs.com (Job: ee36c7b4-44c1-4c3e-9c77-bf6b8940644a) - Active jobs: 8","timestamp":"2025-10-02 02:36:47"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 2 jobs (2 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 11493ms","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 7","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f079d0e5-8df1-456c-8f8e-9526d7d42998 completed successfully","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e0967d7f-5483-4d1e-aa28-bf00ad1c7908 is now active","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://nestjs.com (Job: e0967d7f-5483-4d1e-aa28-bf00ad1c7908) - Active jobs: 8","timestamp":"2025-10-02 02:36:50"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 13053ms","timestamp":"2025-10-02 02:36:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 7","timestamp":"2025-10-02 02:36:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 30ffd560-d943-4924-9d7c-c82c0c1e12cb completed successfully","timestamp":"2025-10-02 02:36:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e3863aaa-8e3a-47cc-aceb-85332045bcd4 is now active","timestamp":"2025-10-02 02:36:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: e3863aaa-8e3a-47cc-aceb-85332045bcd4) - Active jobs: 8","timestamp":"2025-10-02 02:36:52"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://stackoverflow.com in 15937ms","timestamp":"2025-10-02 02:36:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://stackoverflow.com - Active jobs: 7","timestamp":"2025-10-02 02:36:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 83220de7-f2e5-4beb-81ac-0156ac59b317 completed successfully","timestamp":"2025-10-02 02:36:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 5e3c00ff-b9f8-4e62-b713-aa75f2b269cd is now active","timestamp":"2025-10-02 02:36:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.reddit.com (Job: 5e3c00ff-b9f8-4e62-b713-aa75f2b269cd) - Active jobs: 8","timestamp":"2025-10-02 02:36:55"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.npmjs.com in 9076ms","timestamp":"2025-10-02 02:36:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.npmjs.com - Active jobs: 7","timestamp":"2025-10-02 02:36:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job ee36c7b4-44c1-4c3e-9c77-bf6b8940644a completed successfully","timestamp":"2025-10-02 02:36:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 61af3f55-7ef6-492f-8068-829e62bdb177 is now active","timestamp":"2025-10-02 02:36:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://twitter.com (Job: 61af3f55-7ef6-492f-8068-829e62bdb177) - Active jobs: 8","timestamp":"2025-10-02 02:36:57"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.linkedin.com in 18811ms","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.linkedin.com - Active jobs: 7","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e1462c9d-940f-4a6c-9dcd-cd7b216eb407 completed successfully","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f8ee72b3-05a2-4912-96c3-71e8f313baf5 is now active","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.linkedin.com (Job: f8ee72b3-05a2-4912-96c3-71e8f313baf5) - Active jobs: 8","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://twitter.com in 19079ms","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://twitter.com - Active jobs: 7","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 38eef44b-cc3c-4b8f-8bab-0e72369ea18b completed successfully","timestamp":"2025-10-02 02:36:58"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.reddit.com in 22988ms","timestamp":"2025-10-02 02:37:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.reddit.com - Active jobs: 6","timestamp":"2025-10-02 02:37:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job d80a2256-6153-46de-abbf-3cbc3fe18cf0 completed successfully","timestamp":"2025-10-02 02:37:02"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 11525ms","timestamp":"2025-10-02 02:37:05"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 5","timestamp":"2025-10-02 02:37:05"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e3863aaa-8e3a-47cc-aceb-85332045bcd4 completed successfully","timestamp":"2025-10-02 02:37:05"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 6555b805-f436-440d-9c54-9fc0ee691cc9 is now active","timestamp":"2025-10-02 02:37:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://en.wikipedia.org (Job: 6555b805-f436-440d-9c54-9fc0ee691cc9) - Active jobs: 6","timestamp":"2025-10-02 02:37:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4f05731c-831c-423f-8e91-381a8a0267cc is now active","timestamp":"2025-10-02 02:37:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 4f05731c-831c-423f-8e91-381a8a0267cc) - Active jobs: 7","timestamp":"2025-10-02 02:37:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 17dc2c16-97df-4643-9c3d-6152b6caec9e is now active","timestamp":"2025-10-02 02:37:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 17dc2c16-97df-4643-9c3d-6152b6caec9e) - Active jobs: 8","timestamp":"2025-10-02 02:37:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://nestjs.com in 19777ms","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://nestjs.com - Active jobs: 7","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e0967d7f-5483-4d1e-aa28-bf00ad1c7908 completed successfully","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f0502dc3-3dfd-4f46-9ac5-ddf03927f386 is now active","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: f0502dc3-3dfd-4f46-9ac5-ddf03927f386) - Active jobs: 8","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://stackoverflow.com in 23252ms","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://stackoverflow.com - Active jobs: 7","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 9214bd6e-6a59-4366-b23f-f817694a8610 completed successfully","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f86d8b03-7d26-4894-9b08-03c2709589df is now active","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.npmjs.com (Job: f86d8b03-7d26-4894-9b08-03c2709589df) - Active jobs: 8","timestamp":"2025-10-02 02:37:11"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://twitter.com in 17300ms","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://twitter.com - Active jobs: 7","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 61af3f55-7ef6-492f-8068-829e62bdb177 completed successfully","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4a03a482-b165-40d6-92ab-62f07a1e1556 is now active","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://nestjs.com (Job: 4a03a482-b165-40d6-92ab-62f07a1e1556) - Active jobs: 8","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 7746ms","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 7","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 7744ms","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 6","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 17dc2c16-97df-4643-9c3d-6152b6caec9e completed successfully","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 568df1cb-e0ad-49c2-88b9-392dda3711fc is now active","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: 568df1cb-e0ad-49c2-88b9-392dda3711fc) - Active jobs: 7","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4f05731c-831c-423f-8e91-381a8a0267cc completed successfully","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 026cca9a-def8-4cc4-a508-478affa2cb8a is now active","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: 026cca9a-def8-4cc4-a508-478affa2cb8a) - Active jobs: 8","timestamp":"2025-10-02 02:37:16"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 02:37:21"}
+{"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 02:37:21"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 13 jobs (13 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 02:37:21"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.npmjs.com in 11597ms","timestamp":"2025-10-02 02:37:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.npmjs.com - Active jobs: 7","timestamp":"2025-10-02 02:37:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f86d8b03-7d26-4894-9b08-03c2709589df completed successfully","timestamp":"2025-10-02 02:37:24"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://en.wikipedia.org in 16470ms","timestamp":"2025-10-02 02:37:25"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://en.wikipedia.org - Active jobs: 6","timestamp":"2025-10-02 02:37:25"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 6555b805-f436-440d-9c54-9fc0ee691cc9 completed successfully","timestamp":"2025-10-02 02:37:25"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.google.com in 9171ms","timestamp":"2025-10-02 02:37:26"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.google.com - Active jobs: 5","timestamp":"2025-10-02 02:37:26"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 568df1cb-e0ad-49c2-88b9-392dda3711fc completed successfully","timestamp":"2025-10-02 02:37:26"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 17063ms","timestamp":"2025-10-02 02:37:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 4","timestamp":"2025-10-02 02:37:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f0502dc3-3dfd-4f46-9ac5-ddf03927f386 completed successfully","timestamp":"2025-10-02 02:37:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://github.com in 13863ms","timestamp":"2025-10-02 02:37:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://github.com - Active jobs: 3","timestamp":"2025-10-02 02:37:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 026cca9a-def8-4cc4-a508-478affa2cb8a completed successfully","timestamp":"2025-10-02 02:37:31"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://nestjs.com in 15093ms","timestamp":"2025-10-02 02:37:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://nestjs.com - Active jobs: 2","timestamp":"2025-10-02 02:37:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 4a03a482-b165-40d6-92ab-62f07a1e1556 completed successfully","timestamp":"2025-10-02 02:37:32"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.linkedin.com in 34387ms","timestamp":"2025-10-02 02:37:33"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.linkedin.com - Active jobs: 1","timestamp":"2025-10-02 02:37:33"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job f8ee72b3-05a2-4912-96c3-71e8f313baf5 completed successfully","timestamp":"2025-10-02 02:37:33"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 02:37:46"}
+{"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 0 batch(es) from memory","timestamp":"2025-10-02 02:37:46"}
+{"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 7 jobs (7 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 02:37:46"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7e28a80f-61a8-4891-b648-3bd380bbc129 is now active","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 7e28a80f-61a8-4891-b648-3bd380bbc129) - Active jobs: 2","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 261a7c1c-ac3e-4830-9959-77cb48972df5 is now active","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://example.com (Job: 261a7c1c-ac3e-4830-9959-77cb48972df5) - Active jobs: 3","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 652b1290-611b-4c31-b513-ecf66f711761 is now active","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.google.com (Job: 652b1290-611b-4c31-b513-ecf66f711761) - Active jobs: 4","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 0db96d81-84dd-4854-812f-2e28ba71fc34 is now active","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://github.com (Job: 0db96d81-84dd-4854-812f-2e28ba71fc34) - Active jobs: 5","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job e9c0a906-2a80-4072-857b-e37bd148b350 is now active","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.npmjs.com (Job: e9c0a906-2a80-4072-857b-e37bd148b350) - Active jobs: 6","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job dce86ff1-8bd5-4f2b-8d02-09e87289c144 is now active","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.reddit.com (Job: dce86ff1-8bd5-4f2b-8d02-09e87289c144) - Active jobs: 7","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7ceb2182-01e1-437c-853f-02e296eb61cf is now active","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://www.linkedin.com (Job: 7ceb2182-01e1-437c-853f-02e296eb61cf) - Active jobs: 8","timestamp":"2025-10-02 02:37:51"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://www.reddit.com in 68031ms","timestamp":"2025-10-02 02:38:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://www.reddit.com - Active jobs: 7","timestamp":"2025-10-02 02:38:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 5e3c00ff-b9f8-4e62-b713-aa75f2b269cd completed successfully","timestamp":"2025-10-02 02:38:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 0ddc9cd6-84d2-4b67-b133-a761ffdb7bf7 is now active","timestamp":"2025-10-02 02:38:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://stackoverflow.com (Job: 0ddc9cd6-84d2-4b67-b133-a761ffdb7bf7) - Active jobs: 8","timestamp":"2025-10-02 02:38:04"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Completed audit for https://example.com in 12278ms","timestamp":"2025-10-02 02:38:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job completed for https://example.com - Active jobs: 7","timestamp":"2025-10-02 02:38:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 7e28a80f-61a8-4891-b648-3bd380bbc129 completed successfully","timestamp":"2025-10-02 02:38:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Job 60f9b342-8cf9-43bf-baa4-d733c61fd4f5 is now active","timestamp":"2025-10-02 02:38:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Starting Lighthouse audit for https://nestjs.com (Job: 60f9b342-8cf9-43bf-baa4-d733c61fd4f5) - Active jobs: 8","timestamp":"2025-10-02 02:38:06"}

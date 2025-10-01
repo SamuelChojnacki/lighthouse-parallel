@@ -152,6 +152,9 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
       console.log(`Speedup: ${speedup.toFixed(2)}x`);
       expect(speedup).toBeGreaterThan(2); // At least 2x speedup
 
+      // Wait a bit for Redis to settle
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       // Verify individual job results
       const jobStatuses = await Promise.all(
         jobIds.map((jobId: string) =>
@@ -177,7 +180,7 @@ describe('Parallel Lighthouse Audits (e2e)', () => {
         expect(result).toHaveProperty('duration');
         expect(result).toHaveProperty('url');
       });
-    }, 300000); // 5 minute timeout
+    }, 180000); // 3 minute timeout
 
     it('should handle concurrent batches', async () => {
       const batch1Urls = TEST_URLS.slice(0, 5);

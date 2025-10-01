@@ -14,6 +14,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: '../dist/public',
+    emptyOutDir: true,
+  },
   server: {
     port: 5173,
     proxy: {
@@ -21,6 +25,8 @@ export default defineConfig({
       '/lighthouse': 'http://localhost:3000',
       '/metrics': 'http://localhost:3000',
       '/logs': 'http://localhost:3000',
+      '/config': 'http://localhost:3000',
+      '/auth': 'http://localhost:3000',
     },
   },
 })

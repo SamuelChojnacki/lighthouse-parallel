@@ -1,6 +1,6 @@
 import { Processor, WorkerHost, OnWorkerEvent } from '@nestjs/bullmq';
 import { Job } from 'bullmq';
-import { Logger, OnModuleDestroy } from '@nestjs/common';
+import { Logger, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { fork, ChildProcess } from 'child_process';
 import { join } from 'path';
@@ -13,13 +13,9 @@ export interface LighthouseJobData {
 }
 
 @Processor('lighthouse-audits', {
-  concurrency: parseInt(process.env.WORKER_CONCURRENCY || '5', 10),
-  limiter: {
-    max: parseInt(process.env.WORKER_CONCURRENCY || '5', 10),
-    duration: 1000,
-  },
+  concurrency: parseInt(process.env.WORKER_CONCURRENCY, 10)
 })
-export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy {
+export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, OnModuleInit {
   private readonly logger = new Logger(LighthouseProcessor.name);
   private readonly concurrency: number;
   private activeJobs = 0;
@@ -30,8 +26,19 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy {
     private metricsService: LighthouseMetricsService,
   ) {
     super();
-    this.concurrency = this.configService.get<number>('WORKER_CONCURRENCY', 5);
+    const concurrencyValue = parseInt(this.configService.get<string>('WORKER_CONCURRENCY', '10'), 10);
+    this.concurrency = Number.isFinite(concurrencyValue) && concurrencyValue > 0 ? concurrencyValue : 10;
     this.logger.log(`Processor initialized with concurrency: ${this.concurrency}`);
+  }
+
+  onModuleInit() {
+    // Update worker concurrency dynamically after initialization
+    if (this.worker && Number.isFinite(this.concurrency) && this.concurrency > 0) {
+      this.worker.concurrency = this.concurrency;
+      this.logger.log(`Worker concurrency set to: ${this.concurrency}`);
+    } else {
+      this.logger.warn(`Invalid concurrency value: ${this.concurrency}, keeping default`);
+    }
   }
 
   getConcurrency(): number {
