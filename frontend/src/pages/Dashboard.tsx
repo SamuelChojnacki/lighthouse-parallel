@@ -2,14 +2,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useStats } from "@/hooks/useStats"
-
-const WORKER_CONCURRENCY = 5
+import { useConfig } from "@/hooks/useConfig"
 
 export function Dashboard() {
   const { stats, loading, error } = useStats()
+  const { config } = useConfig()
+
+  const workerConcurrency = config?.workerConcurrency || 5
 
   const utilization = stats
-    ? Math.round((stats.active / WORKER_CONCURRENCY) * 100)
+    ? Math.round((stats.active / workerConcurrency) * 100)
     : 0
 
   if (loading && !stats) {
@@ -130,12 +132,12 @@ export function Dashboard() {
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-muted-foreground">Worker Concurrency</span>
-              <span className="font-mono font-semibold">{WORKER_CONCURRENCY} workers</span>
+              <span className="font-mono font-semibold">{workerConcurrency} workers</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-muted-foreground">Active Workers</span>
               <span className="font-mono font-semibold tabular-nums">
-                {stats?.active ?? 0} / {WORKER_CONCURRENCY}
+                {stats?.active ?? 0} / {workerConcurrency}
               </span>
             </div>
             <div className="space-y-2">

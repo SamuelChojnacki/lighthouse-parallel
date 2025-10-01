@@ -34,6 +34,7 @@ export class ConfigController {
     schema: {
       example: {
         apiKey: 'your-api-key-here',
+        workerConcurrency: 10,
       },
     },
   })
@@ -44,6 +45,7 @@ export class ConfigController {
   getPublicConfig() {
     return {
       apiKey: this.configService.get<string>('API_KEY'),
+      workerConcurrency: this.configService.get<number>('WORKER_CONCURRENCY') || 5,
     };
   }
 }
