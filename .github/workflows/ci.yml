@@ -19,7 +19,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Start services
-        run: docker-compose up -d
+        run: docker compose up -d
 
       - name: Wait for API to be ready
         run: |
@@ -29,31 +29,31 @@ jobs:
 
       - name: Check services health
         run: |
-          docker-compose ps
-          docker-compose logs api
+          docker compose ps
+          docker compose logs api
 
       - name: Install test dependencies
         run: |
-          docker-compose exec -T api npm install
+          docker compose exec -T api npm install
 
       - name: Run E2E tests
         run: |
           echo "Running E2E tests for 10 parallel Lighthouse audits..."
-          docker-compose exec -T api npm run test:e2e
+          docker compose exec -T api npm run test:e2e
         env:
           CI: true
 
       - name: Get API logs
         if: always()
-        run: docker-compose logs api
+        run: docker compose logs api
 
       - name: Get Redis logs
         if: always()
-        run: docker-compose logs redis
+        run: docker compose logs redis
 
       - name: Cleanup
         if: always()
-        run: docker-compose down -v
+        run: docker compose down -v
 
   performance-benchmark:
     runs-on: ubuntu-latest
@@ -65,7 +65,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Start services
-        run: docker-compose up -d
+        run: docker compose up -d
 
       - name: Wait for API
         run: |
@@ -135,7 +135,7 @@ jobs:
 
       - name: Cleanup
         if: always()
-        run: docker-compose down -v
+        run: docker compose down -v
 
   build-test:
     runs-on: ubuntu-latest
