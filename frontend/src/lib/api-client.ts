@@ -1,15 +1,29 @@
+import { AUTH_ERROR_MESSAGES } from '../constants/error-messages';
+
 /**
  * API Client with automatic API Key authentication
  * All requests automatically include the X-API-Key header
- * API Key is fetched from /config/public endpoint
+ * API Key is fetched from /config/public endpoint (requires JWT token)
  */
 
 let API_KEY: string | null = null;
 let apiKeyPromise: Promise<string> | null = null;
 
-// Fetch API key from backend config endpoint
-// Uses a shared promise to prevent multiple parallel requests
-async function getApiKey(): Promise<string> {
+/**
+ * Get authentication token from sessionStorage
+ * Token is stored after successful login
+ */
+function getAuthToken(): string | null {
+  return sessionStorage.getItem('auth_token');
+}
+
+/**
+ * Fetch API key from backend config endpoint
+ * Requires valid JWT token in sessionStorage
+ * Uses a shared promise to prevent multiple parallel requests
+ * @public - Exported for use in hooks that need raw fetch() with API key
+ */
+export async function getApiKey(): Promise<string> {
   // Return cached key if available
   if (API_KEY) return API_KEY;
 
@@ -19,16 +33,32 @@ async function getApiKey(): Promise<string> {
   // Create new promise for fetching API key
   apiKeyPromise = (async () => {
     try {
-      const response = await fetch('/config/public');
-      if (!response.ok) {
-        throw new Error('Failed to fetch API configuration');
+      const token = getAuthToken();
+      if (!token) {
+        throw new Error(AUTH_ERROR_MESSAGES.NO_TOKEN);
       }
+
+      const response = await fetch('/config/public', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        // If unauthorized, token might be expired
+        if (response.status === 401) {
+          sessionStorage.removeItem('auth_token');
+          throw new Error(AUTH_ERROR_MESSAGES.SESSION_EXPIRED);
+        }
+        throw new Error(AUTH_ERROR_MESSAGES.CONFIG_FETCH_FAILED);
+      }
+
       const config = await response.json();
       API_KEY = config.apiKey;
 
       if (!API_KEY) {
         console.error('API Key not found in configuration');
-        throw new Error('API Key not found in configuration');
+        throw new Error(AUTH_ERROR_MESSAGES.API_KEY_NOT_FOUND);
       }
 
       console.log('✅ API Key loaded successfully');

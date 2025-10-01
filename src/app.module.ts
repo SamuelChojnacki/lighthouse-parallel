@@ -11,6 +11,7 @@ import { MetricsModule } from './metrics/metrics.module';
 import { LoggerModule } from './logger/logger.module';
 import { SwaggerDocsModule } from './swagger/swagger.module';
 import { ConfigurationModule } from './config/config.module';
+import { AuthModule } from './auth/auth.module';
 import { ApiKeyGuard } from './auth/guards/api-key.guard';
 
 @Module({
@@ -28,6 +29,7 @@ import { ApiKeyGuard } from './auth/guards/api-key.guard';
     LighthouseModule,
     HealthModule,
     SwaggerDocsModule,
+    AuthModule,
     ConfigurationModule,
   ],
   providers: [

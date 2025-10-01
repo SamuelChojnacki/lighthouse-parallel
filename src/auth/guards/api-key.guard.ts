@@ -8,6 +8,7 @@ import {
 import { Reflector } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { IS_PUBLIC_KEY } from '../decorators/public.decorator';
+import { IS_TOKEN_PROTECTED_KEY } from '../decorators/token-protected.decorator';
 
 /**
  * Guard that validates API Key from X-API-Key header
@@ -39,6 +40,16 @@ export class ApiKeyGuard implements CanActivate {
 
     if (isPublic) {
       return true;
+    }
+
+    // Check if endpoint is token-protected (should skip API Key validation)
+    const isTokenProtected = this.reflector.getAllAndOverride<boolean>(
+      IS_TOKEN_PROTECTED_KEY,
+      [context.getHandler(), context.getClass()],
+    );
+
+    if (isTokenProtected) {
+      return true; // Skip API Key check, TokenGuard will handle it
     }
     const apiKey = request.headers['x-api-key'];
     const validApiKey = this.configService.get<string>('API_KEY');

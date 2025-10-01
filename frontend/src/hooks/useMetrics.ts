@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { getApiKey } from '@/lib/api-client'
 
 export interface MetricData {
   name: string
@@ -62,6 +63,11 @@ function parsePrometheusMetrics(text: string): ParsedMetrics {
   return { system, lighthouse, http }
 }
 
+/**
+ * Hook to fetch and parse Prometheus metrics in real-time
+ * Polls every 5 seconds
+ * Uses api-client for automatic API key authentication
+ */
 export function useMetrics() {
   const [metrics, setMetrics] = useState<ParsedMetrics | null>(null)
   const [loading, setLoading] = useState(true)
@@ -70,17 +76,11 @@ export function useMetrics() {
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
-        // Fetch API key from config endpoint
-        const configResponse = await fetch('/config/public')
-        const config = await configResponse.json()
-        const apiKey = config.apiKey
-
-        const headers: HeadersInit = {}
-        if (apiKey) {
-          headers['X-API-Key'] = apiKey
-        }
-
-        const response = await fetch('/metrics', { headers })
+        const response = await fetch('/metrics', {
+          headers: {
+            'X-API-Key': await getApiKey(),
+          },
+        })
 
         if (!response.ok) {
           throw new Error('Failed to fetch metrics')

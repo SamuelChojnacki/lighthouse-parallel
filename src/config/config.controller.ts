@@ -1,22 +1,32 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, UseGuards } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
-import { Public } from '../auth/decorators/public.decorator';
+import {
+  ApiTags,
+  ApiOperation,
+  ApiResponse,
+  ApiBearerAuth,
+} from '@nestjs/swagger';
+import { TokenGuard } from '../auth/guards/token.guard';
+import { TokenProtected } from '../auth/decorators/token-protected.decorator';
 
 /**
  * Configuration endpoint for frontend
  * Returns public configuration needed by the client
+ * Protected by JWT token to prevent unauthorized API Key exposure
  */
 @ApiTags('configuration')
 @Controller('config')
-@Public() // This endpoint is public - needed for frontend to bootstrap
 export class ConfigController {
   constructor(private configService: ConfigService) {}
 
   @Get('public')
+  @TokenProtected()
+  @UseGuards(TokenGuard)
+  @ApiBearerAuth()
   @ApiOperation({
     summary: 'Get public configuration for frontend',
-    description: 'Returns configuration values needed by the frontend application',
+    description:
+      'Returns API Key for authenticated frontend users. Requires valid JWT token from /auth/login.',
   })
   @ApiResponse({
     status: 200,
@@ -26,6 +36,10 @@ export class ConfigController {
         apiKey: 'your-api-key-here',
       },
     },
+  })
+  @ApiResponse({
+    status: 401,
+    description: 'Invalid or missing JWT token',
   })
   getPublicConfig() {
     return {

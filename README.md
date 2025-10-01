@@ -43,6 +43,19 @@ npm install
 # Copier le fichier d'environnement
 cp .env.example .env
 
+# IMPORTANT: Configurer l'authentification du dashboard
+# Étape 1: Générer une API Key sécurisée
+node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+# Copier le résultat dans .env → API_KEY
+
+# Étape 2: Générer un secret JWT
+node -e "console.log(require('crypto').randomBytes(64).toString('base64'))"
+# Copier le résultat dans .env → JWT_SECRET
+
+# Étape 3: Créer un hash bcrypt pour votre mot de passe dashboard
+node -e "const bcrypt = require('bcrypt'); bcrypt.hash('VotreMotDePasseIci', 10).then(console.log)"
+# Copier le résultat dans .env → DASHBOARD_PASSWORD_HASH
+
 # Démarrer Redis (via Docker)
 docker-compose up redis -d
 
