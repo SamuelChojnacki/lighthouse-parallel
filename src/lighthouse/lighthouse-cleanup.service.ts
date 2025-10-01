@@ -1,6 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { LighthouseService } from './lighthouse.service';
+import { CleanupResult, CleanupAllResult } from './interfaces/queue-stats.interface';
 
 @Injectable()
 export class LighthouseCleanupService {
@@ -9,52 +10,48 @@ export class LighthouseCleanupService {
   constructor(private readonly lighthouseService: LighthouseService) {}
 
   /**
-   * Clean up completed and failed jobs every hour
-   * Keeps only jobs from the last 24 hours
+   * Clean up ALL jobs and Redis storage every hour
+   * Removes everything: completed jobs, failed jobs, batches, and Redis data
    */
   @Cron(CronExpression.EVERY_HOUR)
   async cleanupOldJobs() {
-    this.logger.log('Starting Redis cleanup job...');
+    this.logger.log('Starting automatic complete cleanup (hourly)...');
 
     try {
-      const queue = this.lighthouseService.getQueue();
-
-      // Clean completed jobs older than 24 hours
-      const completedCleaned = await queue.clean(24 * 60 * 60 * 1000, 1000, 'completed');
-      this.logger.log(`Cleaned ${completedCleaned.length} completed jobs`);
-
-      // Clean failed jobs older than 24 hours
-      const failedCleaned = await queue.clean(24 * 60 * 60 * 1000, 1000, 'failed');
-      this.logger.log(`Cleaned ${failedCleaned.length} failed jobs`);
-
-      // Get current stats
-      const stats = await this.lighthouseService.getQueueStats();
-      this.logger.log(
-        `Redis cleanup complete. Current queue size: ${stats.waiting + stats.active + stats.completed + stats.failed}`,
-      );
+      await this.cleanEverything();
+      this.logger.log('Automatic cleanup completed successfully');
     } catch (error) {
-      this.logger.error('Error during Redis cleanup:', error);
+      this.logger.error('Error during automatic cleanup:', error);
     }
   }
 
   /**
-   * Manual cleanup method (can be called via endpoint if needed)
+   * Clean EVERYTHING - BullMQ jobs, batches, and Redis storage
+   * This is the ONLY cleanup method exposed to users
    */
-  async manualCleanup(): Promise<{ cleaned: number; stats: any }> {
-    this.logger.log('Manual cleanup triggered');
+  async cleanEverything(): Promise<CleanupAllResult> {
+    this.logger.log('Complete cleanup triggered - cleaning EVERYTHING');
 
     const queue = this.lighthouseService.getQueue();
 
-    const completedCleaned = await queue.clean(24 * 60 * 60 * 1000, 1000, 'completed');
-    const failedCleaned = await queue.clean(24 * 60 * 60 * 1000, 1000, 'failed');
+    // Clean ALL BullMQ jobs (completed and failed)
+    const completedCleaned = await queue.clean(0, 10000, 'completed');
+    const failedCleaned = await queue.clean(0, 10000, 'failed');
+
+    // Clear all batch tracking from memory
+    this.lighthouseService.clearAllBatches();
 
     const totalCleaned = completedCleaned.length + failedCleaned.length;
     const stats = await this.lighthouseService.getQueueStats();
 
-    this.logger.log(`Manual cleanup complete. Removed ${totalCleaned} jobs`);
+    this.logger.log(
+      `Complete cleanup done. Removed ${totalCleaned} jobs (${completedCleaned.length} completed, ${failedCleaned.length} failed), cleared all batches`,
+    );
 
     return {
       cleaned: totalCleaned,
+      completedCleaned: completedCleaned.length,
+      failedCleaned: failedCleaned.length,
       stats,
     };
   }

@@ -1,4 +1,6 @@
-export function generateMinimalDashboardHTML(stats: any): string {
+import { QueueStats } from './interfaces/queue-stats.interface';
+
+export function generateMinimalDashboardHTML(stats: QueueStats): string {
   const total = stats.total || 0;
   const maxConcurrency = parseInt(process.env.WORKER_CONCURRENCY || '5');
   const utilization = total > 0 ? Math.round((stats.active / maxConcurrency) * 100) : 0;

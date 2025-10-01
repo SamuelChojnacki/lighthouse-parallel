@@ -9,8 +9,6 @@ import {
   QueueSizeGauge,
   ActiveWorkersGauge,
 } from './lighthouse-metrics.service';
-import { MetricsDashboardController } from './metrics-dashboard.controller';
-import { MetricsViewerController } from './metrics-viewer.controller';
 
 @Module({
   imports: [
@@ -24,7 +22,6 @@ import { MetricsViewerController } from './metrics-viewer.controller';
       },
     }),
   ],
-  controllers: [MetricsDashboardController, MetricsViewerController],
   providers: [
     LighthouseMetricsService,
     JobsTotalCounter,

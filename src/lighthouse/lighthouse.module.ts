@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
 import { BullModule } from '@nestjs/bullmq';
-import { LighthouseController } from './lighthouse.controller';
-import { LighthouseDashboardController } from './lighthouse-dashboard.controller';
+import { LighthouseAuditController } from './controllers/lighthouse-audit.controller';
+import { LighthouseAdminController } from './controllers/lighthouse-admin.controller';
 import { LighthouseService } from './lighthouse.service';
 import { LighthouseProcessor } from './lighthouse.processor';
 import { LighthouseCleanupService } from './lighthouse-cleanup.service';
-import { RedisCleanupService } from './redis-cleanup.service';
 import { LIGHTHOUSE_QUEUE } from '../config/queue.config';
 import { MetricsModule } from '../metrics/metrics.module';
 
@@ -16,12 +15,11 @@ import { MetricsModule } from '../metrics/metrics.module';
     }),
     MetricsModule,
   ],
-  controllers: [LighthouseController, LighthouseDashboardController],
+  controllers: [LighthouseAuditController, LighthouseAdminController],
   providers: [
     LighthouseService,
     LighthouseProcessor,
     LighthouseCleanupService,
-    RedisCleanupService,
   ],
 })
 export class LighthouseModule {}
