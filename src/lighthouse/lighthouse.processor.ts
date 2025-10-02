@@ -104,6 +104,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, 
         // Fork a child process for isolation
         const child: ChildProcess = fork(workerPath, [], {
           stdio: ['pipe', 'pipe', 'pipe', 'ipc'],
+          env: { ...process.env }, // Explicitly pass environment variables including CHROME_PATH
         });
 
         // Timeout after 2 minutes
