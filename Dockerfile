@@ -21,6 +21,7 @@ COPY . .
 RUN cd frontend && \
     rm -rf node_modules package-lock.json && \
     npm install && \
+    npm install @rollup/rollup-linux-x64-gnu --save-dev && \
     cd .. && \
     npm run build
 
