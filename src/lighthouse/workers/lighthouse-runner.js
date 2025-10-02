@@ -9,15 +9,28 @@ async function runLighthouseAudit(url, options = {}) {
   let chrome;
 
   try {
+    // Set Chrome path if provided via environment variable (for Docker/Nixpacks)
+    const chromePath = process.env.CHROME_PATH;
+
     // Launch Chrome with unique port (auto-assigned)
-    chrome = await chromeLauncher.launch({
+    const launchOptions = {
       chromeFlags: [
         '--headless',
         '--disable-gpu',
         '--no-sandbox',
         '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--disable-web-security',
+        '--disable-features=site-per-process',
       ],
-    });
+    };
+
+    // Add Chrome path if available (for Docker environments)
+    if (chromePath) {
+      launchOptions.chromePath = chromePath;
+    }
+
+    chrome = await chromeLauncher.launch(launchOptions);
 
     // Default Lighthouse configuration
     const lighthouseOptions = {

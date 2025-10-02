@@ -10,3 +10,6 @@ cmds = ["npm run build"]
 
 [start]
 cmd = "npm run start:prod"
+
+[variables]
+CHROME_PATH = "/nix/var/nix/profiles/default/bin/chromium"
