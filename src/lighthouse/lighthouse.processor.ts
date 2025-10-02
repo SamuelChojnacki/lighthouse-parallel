@@ -12,11 +12,13 @@ export interface LighthouseJobData {
   jobId: string;
 }
 
-// Get concurrency from environment
-const workerConcurrency = parseInt(process.env.WORKER_CONCURRENCY, 10);
+// Get concurrency from environment with fallback
+const workerConcurrency = process.env.WORKER_CONCURRENCY
+  ? parseInt(process.env.WORKER_CONCURRENCY, 10)
+  : undefined;
 
 @Processor('lighthouse-audits', {
-  concurrency: workerConcurrency
+  ...(workerConcurrency && { concurrency: workerConcurrency })
 })
 export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, OnModuleInit {
   private readonly logger = new Logger(LighthouseProcessor.name);
