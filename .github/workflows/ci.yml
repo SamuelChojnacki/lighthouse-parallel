@@ -18,13 +18,15 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Create environment file
+        run: |
+          echo "WORKER_CONCURRENCY=${{ secrets.WORKER_CONCURRENCY }}" > .env
+          echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          echo "DASHBOARD_PASSWORD_HASH=${{ secrets.DASHBOARD_PASSWORD_HASH }}" >> .env
+
       - name: Start services
         run: docker compose up -d
-        env:
-          WORKER_CONCURRENCY: ${{ vars.WORKER_CONCURRENCY }}
-          API_KEY: ${{ secrets.API_KEY }}
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          DASHBOARD_PASSWORD_HASH: ${{ secrets.DASHBOARD_PASSWORD_HASH }}
 
       - name: Wait for API to be ready
         env:
@@ -39,14 +41,15 @@ jobs:
           docker compose ps
           docker compose logs api
 
-      - name: Install test dependencies
+      - name: Install all dependencies in container
         run: |
-          docker compose exec -T api npm install
+          docker compose exec -T api npm ci
+          docker compose exec -T api npm install --save-dev jest @nestjs/testing supertest
 
       - name: Run E2E tests
         run: |
           echo "Running E2E tests for 5 parallel Lighthouse audits..."
-          docker compose exec -T api npm run test:e2e
+          docker compose exec -T -e WORKER_CONCURRENCY=${{ secrets.WORKER_CONCURRENCY }} api npm run test:e2e
         env:
           CI: true
 
@@ -71,13 +74,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Create environment file
+        run: |
+          echo "WORKER_CONCURRENCY=${{ secrets.WORKER_CONCURRENCY }}" > .env
+          echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          echo "DASHBOARD_PASSWORD_HASH=${{ secrets.DASHBOARD_PASSWORD_HASH }}" >> .env
+
       - name: Start services
         run: docker compose up -d
-        env:
-          WORKER_CONCURRENCY: ${{ vars.WORKER_CONCURRENCY }}
-          API_KEY: ${{ secrets.API_KEY }}
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          DASHBOARD_PASSWORD_HASH: ${{ secrets.DASHBOARD_PASSWORD_HASH }}
 
       - name: Wait for API
         env:
