@@ -17,6 +17,13 @@ const workerConcurrency = process.env.WORKER_CONCURRENCY
   ? parseInt(process.env.WORKER_CONCURRENCY, 10)
   : undefined;
 
+// Log configuration at module load
+console.log(`[LighthouseProcessor] Configuration:`, {
+  WORKER_CONCURRENCY_ENV: process.env.WORKER_CONCURRENCY,
+  workerConcurrency: workerConcurrency,
+  willSetConcurrency: !!workerConcurrency
+});
+
 @Processor('lighthouse-audits', {
   ...(workerConcurrency && { concurrency: workerConcurrency })
 })
@@ -37,6 +44,13 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, 
   }
 
   onModuleInit() {
+    // Log actual worker configuration
+    this.logger.log(`Worker configuration:`, {
+      configuredConcurrency: this.concurrency,
+      actualWorkerConcurrency: this.worker?.concurrency,
+      envValue: process.env.WORKER_CONCURRENCY
+    });
+
     // Update worker concurrency dynamically after initialization
     if (this.worker && Number.isFinite(this.concurrency) && this.concurrency > 0) {
       this.worker.concurrency = this.concurrency;
