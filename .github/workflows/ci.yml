@@ -43,8 +43,7 @@ jobs:
 
       - name: Install all dependencies in container
         run: |
-          docker compose exec -T api npm ci
-          docker compose exec -T api npm install --save-dev jest @nestjs/testing supertest
+          docker compose exec -T api npm ci --include=dev
 
       - name: Run E2E tests
         run: |

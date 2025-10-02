@@ -33,8 +33,8 @@ WORKDIR /app
 # Copy package files for backend
 COPY package*.json ./
 
-# Install backend dependencies
-RUN npm ci
+# Install backend dependencies (including dev for tests)
+RUN npm ci --include=dev
 
 # Copy frontend package files
 COPY frontend/package*.json ./frontend/
