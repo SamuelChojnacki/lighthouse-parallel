@@ -12,8 +12,11 @@ export interface LighthouseJobData {
   jobId: string;
 }
 
+// Get concurrency from environment
+const workerConcurrency = parseInt(process.env.WORKER_CONCURRENCY, 10);
+
 @Processor('lighthouse-audits', {
-  concurrency: parseInt(process.env.WORKER_CONCURRENCY, 10)
+  concurrency: workerConcurrency
 })
 export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, OnModuleInit {
   private readonly logger = new Logger(LighthouseProcessor.name);
