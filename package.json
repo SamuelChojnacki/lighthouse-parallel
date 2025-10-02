@@ -5,6 +5,10 @@
   "author": "",
   "private": true,
   "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "build": "npm run build:backend && npm run build:frontend",
     "build:backend": "nest build",
