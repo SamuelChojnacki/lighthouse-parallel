@@ -131,3 +131,5 @@
 {"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup triggered - cleaning EVERYTHING","timestamp":"2025-10-02 14:41:48"}
 {"context":"LighthouseService","level":"\u001b[32minfo\u001b[39m","message":"Cleared 1 batch(es) from memory","timestamp":"2025-10-02 14:41:48"}
 {"context":"LighthouseCleanupService","level":"\u001b[32minfo\u001b[39m","message":"Complete cleanup done. Removed 220 jobs (220 completed, 0 failed), cleared all batches","timestamp":"2025-10-02 14:41:48"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 14:54:30"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 14:54:30"}
