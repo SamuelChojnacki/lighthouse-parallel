@@ -1,29 +1,21 @@
 # Build stage
 FROM node:22-bookworm AS builder
 
-# Set npm config to handle optional dependencies correctly
-ENV NPM_CONFIG_OPTIONAL=false
-
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-COPY frontend/package*.json ./frontend/
+# Copy only package.json files (not lock files) to force fresh install for linux
+COPY package.json ./
+COPY frontend/package.json ./frontend/
 
-# Install all dependencies
-RUN npm ci && \
-    cd frontend && npm ci
+# Install dependencies - fresh install to get correct native modules for linux
+RUN npm install && \
+    cd frontend && npm install
 
 # Copy source code
 COPY . .
 
-# Fix rollup module issue and build the application
-RUN cd frontend && \
-    rm -rf node_modules package-lock.json && \
-    npm install && \
-    npm install @rollup/rollup-linux-x64-gnu --save-dev && \
-    cd .. && \
-    npm run build
+# Build the application
+RUN npm run build
 
 # Production stage
 FROM node:22-bookworm-slim
@@ -57,11 +49,11 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy only package.json (not lock file) for fresh install
+COPY package.json ./
 
 # Install only production dependencies
-RUN npm ci --omit=dev
+RUN npm install --omit=dev
 
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
