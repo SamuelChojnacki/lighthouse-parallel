@@ -1,3 +1,7 @@
+// Load dotenv before anything else to make env vars available in decorators
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import { Processor, WorkerHost, OnWorkerEvent } from '@nestjs/bullmq';
 import { Job } from 'bullmq';
 import { Logger, OnModuleDestroy, OnModuleInit } from '@nestjs/common';

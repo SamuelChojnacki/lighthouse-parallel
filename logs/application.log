@@ -3315,3 +3315,168 @@
 {"context":{"actualWorkerConcurrency":5,"configuredConcurrency":5,"envValue":"5"},"level":"\u001b[32minfo\u001b[39m","message":"Worker configuration:","timestamp":"2025-10-02 13:13:14"}
 {"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Worker concurrency set to: 5","timestamp":"2025-10-02 13:13:14"}
 {"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 13:13:14"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 8","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 13:15:45"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 13:15:45"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 13:15:45"}
+{"context":{"actualWorkerConcurrency":1,"configuredConcurrency":8,"envValue":"8"},"level":"\u001b[32minfo\u001b[39m","message":"Worker configuration:","timestamp":"2025-10-02 13:15:45"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Worker concurrency set to: 8","timestamp":"2025-10-02 13:15:45"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 13:15:45"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGTERM, starting graceful shutdown...","timestamp":"2025-10-02 13:18:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 13:18:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 13:18:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 13:18:06"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 13:18:06"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 13:18:06"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 8","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 13:18:07"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 13:18:07"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 13:18:07"}
+{"context":{"actualWorkerConcurrency":8,"configuredConcurrency":8,"envValue":"8"},"level":"\u001b[32minfo\u001b[39m","message":"Worker configuration:","timestamp":"2025-10-02 13:18:07"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Worker concurrency set to: 8","timestamp":"2025-10-02 13:18:07"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 13:18:07"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGINT, starting graceful shutdown...","timestamp":"2025-10-02 13:18:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 13:18:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 13:18:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 13:18:29"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 13:18:29"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 13:18:29"}
+{"context":"NestFactory","level":"\u001b[32minfo\u001b[39m","message":"Starting Nest application...","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigHostModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"DiscoveryModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"PrometheusModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"SwaggerDocsModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LoggerModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ServeStaticModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ScheduleModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"TerminusModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Processor initialized with concurrency: 8","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"MetricsModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AppModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"BullModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"JwtModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"AuthModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"HealthModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"ConfigurationModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"InstanceLoader","level":"\u001b[32minfo\u001b[39m","message":"LighthouseModule dependencies initialized","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LoggerController {/logs}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/logs/stats, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"PrometheusController {/metrics}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/metrics, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAuditController {/lighthouse}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/audit, POST} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch, POST} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/job/:jobId, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batch/:batchId, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"LighthouseAdminController {/lighthouse}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/stats, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/cleanup, POST} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/lighthouse/batches, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"HealthController {/health}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/health/ready, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"SwaggerController {/docs}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/docs/info, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"AuthController {/auth}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/auth/login, POST} route","timestamp":"2025-10-02 13:18:37"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"ConfigController {/config}:","timestamp":"2025-10-02 13:18:37"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/config/public, GET} route","timestamp":"2025-10-02 13:18:37"}
+{"context":{"actualWorkerConcurrency":8,"configuredConcurrency":8,"envValue":"8"},"level":"\u001b[32minfo\u001b[39m","message":"Worker configuration:","timestamp":"2025-10-02 13:18:37"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Worker concurrency set to: 8","timestamp":"2025-10-02 13:18:37"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","timestamp":"2025-10-02 13:18:37"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Received SIGINT, starting graceful shutdown...","timestamp":"2025-10-02 13:18:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 13:18:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 13:18:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"Graceful shutdown initiated, waiting for active jobs to complete...","timestamp":"2025-10-02 13:18:44"}
+{"context":"LighthouseProcessor","level":"\u001b[32minfo\u001b[39m","message":"All jobs completed successfully. Processor shutdown complete.","timestamp":"2025-10-02 13:18:44"}
+{"context":"Bootstrap","level":"\u001b[32minfo\u001b[39m","message":"Application closed successfully","timestamp":"2025-10-02 13:18:44"}
