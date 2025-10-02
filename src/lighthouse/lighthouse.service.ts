@@ -2,7 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectQueue } from '@nestjs/bullmq';
 import { Queue } from 'bullmq';
 import { LighthouseJobData } from './lighthouse.processor';
-import { v4 as uuidv4 } from 'uuid';
+import { randomUUID } from 'crypto';
 import { LighthouseMetricsService } from '../metrics/lighthouse-metrics.service';
 import { QueueStats } from './interfaces/queue-stats.interface';
 
@@ -18,7 +18,7 @@ export class LighthouseService {
   ) {}
 
   async addAudit(url: string, categories?: string[]) {
-    const jobId = uuidv4();
+    const jobId = randomUUID();
 
     const job = await this.lighthouseQueue.add(
       'audit',
@@ -47,13 +47,13 @@ export class LighthouseService {
   }
 
   async addBatchAudits(urls: string[], categories?: string[]) {
-    const batchId = uuidv4();
+    const batchId = randomUUID();
     const jobIds: string[] = [];
 
     this.logger.log(`Creating batch ${batchId} with ${urls.length} URLs`);
 
     for (const url of urls) {
-      const jobId = uuidv4();
+      const jobId = randomUUID();
       await this.lighthouseQueue.add(
         'audit',
         {

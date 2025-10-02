@@ -3,7 +3,7 @@ nixPkgs = ["nodejs_20", "npm-9_x", "chromium"]
 aptPkgs = ["libnss3", "libatk1.0-0", "libatk-bridge2.0-0", "libcups2", "libgbm1", "libasound2t64", "libpangocairo-1.0-0", "libxss1", "libgtk-3-0", "libxshmfence1", "libglu1"]
 
 [phases.install]
-cmds = ["rm -f package-lock.json && npm install uuid@10.0.0 && npm install", "cd frontend && npm install"]
+cmds = ["rm -f package-lock.json && npm install", "cd frontend && npm install"]
 
 [phases.build]
 cmds = ["npm run build"]
