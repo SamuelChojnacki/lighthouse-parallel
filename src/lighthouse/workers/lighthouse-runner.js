@@ -9,8 +9,13 @@ async function runLighthouseAudit(url, options = {}) {
   let chrome;
 
   try {
-    // Set Chrome path if provided via environment variable (for Docker/Nixpacks)
-    const chromePath = process.env.CHROME_PATH;
+    // Set Chrome path - force Docker path if Nixpacks path is detected
+    let chromePath = process.env.CHROME_PATH;
+
+    // Override incorrect Nixpacks path with Docker path
+    if (chromePath && chromePath.includes('/nix/')) {
+      chromePath = '/usr/bin/chromium';
+    }
 
     // Launch Chrome with unique port (auto-assigned)
     const launchOptions = {
