@@ -43,9 +43,12 @@ export class ConfigController {
     description: 'Invalid or missing JWT token',
   })
   getPublicConfig() {
+    const concurrencyValue = this.configService.get<string>('WORKER_CONCURRENCY');
+    const workerConcurrency = parseInt(concurrencyValue, 10);
+
     return {
       apiKey: this.configService.get<string>('API_KEY'),
-      workerConcurrency: this.configService.get<number>('WORKER_CONCURRENCY') || 5,
+      workerConcurrency: workerConcurrency,
     };
   }
 }

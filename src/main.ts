@@ -36,8 +36,19 @@ async function bootstrap() {
   // Enable shutdown hooks for graceful shutdown
   app.enableShutdownHooks();
 
-  // Security headers with Helmet
-  app.use(helmet());
+  // Security headers with Helmet - configured to allow WebAssembly
+  app.use(helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-eval'"], // Allow eval for WebAssembly
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", "data:", "https:"],
+        fontSrc: ["'self'", "data:"],
+        connectSrc: ["'self'"],
+      },
+    },
+  }));
 
   app.useGlobalPipes(
     new ValidationPipe({

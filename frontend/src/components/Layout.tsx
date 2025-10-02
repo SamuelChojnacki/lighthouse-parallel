@@ -1,10 +1,17 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
+import { LogOut } from 'lucide-react'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
+  const navigate = useNavigate()
 
   const isActive = (path: string) => location.pathname === path
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('auth_token')
+    navigate('/login')
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -40,13 +47,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </Link>
               </div>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => window.open('/api', '_blank')}
-            >
-              API Docs
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => window.open('/api', '_blank')}
+              >
+                API Docs
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleLogout}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <LogOut className="h-4 w-4 mr-2" />
+                Logout
+              </Button>
+            </div>
           </div>
         </div>
       </nav>

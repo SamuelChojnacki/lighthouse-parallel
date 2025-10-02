@@ -235,11 +235,22 @@ export function Admin() {
                       </Badge>
                       {log.context && (
                         <span className="text-xs text-muted-foreground shrink-0">
-                          [{log.context}]
+                          [{typeof log.context === 'object'
+                            ? JSON.stringify(log.context)
+                            : String(log.context)}]
                         </span>
                       )}
                       <span className={`flex-1 ${getLevelColor(log.level)}`}>
-                        {log.message}
+                        {(() => {
+                          try {
+                            if (typeof log.message === 'object' && log.message !== null) {
+                              return JSON.stringify(log.message, null, 2)
+                            }
+                            return String(log.message)
+                          } catch (e) {
+                            return '[Unable to display message]'
+                          }
+                        })()}
                       </span>
                     </div>
                   ))

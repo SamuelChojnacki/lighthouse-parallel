@@ -8,7 +8,10 @@ export function Dashboard() {
   const { stats, loading, error } = useStats()
   const { config } = useConfig()
 
-  const workerConcurrency = config?.workerConcurrency || 5
+  console.log('Config received:', config)
+  const workerConcurrency = typeof config?.workerConcurrency === 'number'
+    ? config.workerConcurrency
+    : 5
 
   const utilization = stats
     ? Math.round((stats.active / workerConcurrency) * 100)
@@ -132,12 +135,12 @@ export function Dashboard() {
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-muted-foreground">Worker Concurrency</span>
-              <span className="font-mono font-semibold">{workerConcurrency} workers</span>
+              <span className="font-mono font-semibold">{String(workerConcurrency)} workers</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-muted-foreground">Active Workers</span>
               <span className="font-mono font-semibold tabular-nums">
-                {stats?.active ?? 0} / {workerConcurrency}
+                {stats?.active ?? 0} / {String(workerConcurrency)}
               </span>
             </div>
             <div className="space-y-2">

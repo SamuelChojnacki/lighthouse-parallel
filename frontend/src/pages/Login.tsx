@@ -1,4 +1,5 @@
 import { useState, useCallback, type FormEvent } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
@@ -7,13 +8,10 @@ import { AUTH_ERROR_MESSAGES } from '@/constants/error-messages'
 /**
  * Login page component
  * Displays password authentication form
- * @param onLoginSuccess - Callback when login succeeds
  */
-interface LoginPageProps {
-  onLoginSuccess: () => void
-}
-
-export function LoginPage({ onLoginSuccess }: LoginPageProps) {
+export function LoginPage() {
+  const navigate = useNavigate()
+  const location = useLocation()
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -49,8 +47,9 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
       // Store token in sessionStorage (expires on browser close)
       sessionStorage.setItem('auth_token', token)
 
-      // Notify parent component
-      onLoginSuccess()
+      // Navigate to the page they were trying to access, or dashboard
+      const from = (location.state as any)?.from?.pathname || '/'
+      navigate(from, { replace: true })
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : AUTH_ERROR_MESSAGES.LOGIN_FAILED
       setError(errorMessage)
@@ -58,7 +57,7 @@ export function LoginPage({ onLoginSuccess }: LoginPageProps) {
     } finally {
       setLoading(false)
     }
-  }, [password, onLoginSuccess])
+  }, [password, navigate, location])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 p-4">
