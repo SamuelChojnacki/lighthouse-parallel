@@ -1,6 +1,9 @@
 # Build stage
 FROM node:22-bookworm AS builder
 
+# Set npm config to handle optional dependencies correctly
+ENV NPM_CONFIG_OPTIONAL=false
+
 WORKDIR /app
 
 # Copy package files
@@ -14,8 +17,12 @@ RUN npm ci && \
 # Copy source code
 COPY . .
 
-# Build the application
-RUN npm run build
+# Fix rollup module issue and build the application
+RUN cd frontend && \
+    rm -rf node_modules package-lock.json && \
+    npm install && \
+    cd .. && \
+    npm run build
 
 # Production stage
 FROM node:22-bookworm-slim
