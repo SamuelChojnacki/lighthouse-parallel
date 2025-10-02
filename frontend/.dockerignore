@@ -1,0 +1,11 @@
+node_modules
+frontend/node_modules
+dist
+frontend/dist
+.git
+.env
+*.log
+.DS_Store
+coverage
+.nyc_output
+.github

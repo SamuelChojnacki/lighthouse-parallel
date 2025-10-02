@@ -22,6 +22,11 @@ Dans Settings > Secrets and variables > Actions > Variables:
 |--------------|-------|-------------|
 | `WORKER_CONCURRENCY` | `1` | Nombre de workers pour CI (1 pour GitHub Actions) |
 
+## Configuration obligatoire
+
+⚠️ **IMPORTANT**: Ces secrets DOIVENT être configurés dans GitHub pour que la CI fonctionne.
+Sans ces secrets, le docker-compose ne pourra pas démarrer.
+
 ## Note de sécurité
 
 ⚠️ **IMPORTANT**: Les valeurs ci-dessus sont pour la CI uniquement. En production:

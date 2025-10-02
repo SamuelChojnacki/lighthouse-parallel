@@ -30,11 +30,17 @@ ENV LIGHTHOUSE_CHROMIUM_PATH=/usr/bin/chromium
 
 WORKDIR /app
 
-# Copy package files
+# Copy package files for backend
 COPY package*.json ./
 
-# Install dependencies
+# Install backend dependencies
 RUN npm ci
+
+# Copy frontend package files
+COPY frontend/package*.json ./frontend/
+
+# Install frontend dependencies
+RUN cd frontend && npm ci
 
 # Copy source code
 COPY . .

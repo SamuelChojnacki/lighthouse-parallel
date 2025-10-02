@@ -21,15 +21,15 @@ jobs:
       - name: Start services
         run: docker compose up -d
         env:
-          WORKER_CONCURRENCY: ${{ vars.WORKER_CONCURRENCY || '1' }}
-          API_KEY: ${{ secrets.API_KEY || 'wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=' }}
-          JWT_SECRET: ${{ secrets.JWT_SECRET || 'test-jwt-secret-for-ci-only-do-not-use-in-production' }}
-          DASHBOARD_PASSWORD_HASH: ${{ secrets.DASHBOARD_PASSWORD_HASH || '$2b$10$imTl0aNFpkizoRrq7l4tzueGo/sMnG4oykWDaBOoxds2zY7LrY1ha' }}
+          WORKER_CONCURRENCY: ${{ vars.WORKER_CONCURRENCY }}
+          API_KEY: ${{ secrets.API_KEY }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          DASHBOARD_PASSWORD_HASH: ${{ secrets.DASHBOARD_PASSWORD_HASH }}
 
       - name: Wait for API to be ready
         run: |
           echo "Waiting for API to be ready..."
-          API_KEY="${{ secrets.API_KEY || 'wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=' }}"
+          API_KEY="${{ secrets.API_KEY }}"
           timeout 60 sh -c "until curl -f -H \"X-API-Key: $API_KEY\" http://localhost:3000/lighthouse/stats; do sleep 2; done"
           echo "API is ready!"
 
@@ -73,14 +73,14 @@ jobs:
       - name: Start services
         run: docker compose up -d
         env:
-          WORKER_CONCURRENCY: ${{ vars.WORKER_CONCURRENCY || '1' }}
-          API_KEY: ${{ secrets.API_KEY || 'wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=' }}
-          JWT_SECRET: ${{ secrets.JWT_SECRET || 'test-jwt-secret-for-ci-only-do-not-use-in-production' }}
-          DASHBOARD_PASSWORD_HASH: ${{ secrets.DASHBOARD_PASSWORD_HASH || '$2b$10$imTl0aNFpkizoRrq7l4tzueGo/sMnG4oykWDaBOoxds2zY7LrY1ha' }}
+          WORKER_CONCURRENCY: ${{ vars.WORKER_CONCURRENCY }}
+          API_KEY: ${{ secrets.API_KEY }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          DASHBOARD_PASSWORD_HASH: ${{ secrets.DASHBOARD_PASSWORD_HASH }}
 
       - name: Wait for API
         run: |
-          API_KEY="${{ secrets.API_KEY || 'wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=' }}"
+          API_KEY="${{ secrets.API_KEY }}"
           timeout 60 sh -c "until curl -f -H \"X-API-Key: $API_KEY\" http://localhost:3000/lighthouse/stats; do sleep 2; done"
 
       - name: Run performance benchmark
@@ -89,7 +89,7 @@ jobs:
           START_TIME=$(date +%s)
 
           # Launch batch audit
-          API_KEY="${{ secrets.API_KEY || 'wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=' }}"
+          API_KEY="${{ secrets.API_KEY }}"
           RESPONSE=$(curl -X POST http://localhost:3000/lighthouse/batch \
             -H "Content-Type: application/json" \
             -H "X-API-Key: $API_KEY" \
