@@ -2,60 +2,25 @@ services:
   redis:
     image: redis:7-alpine
     container_name: lighthouse-redis
-    command: redis-server --appendonly yes --appendfsync everysec
     ports:
       - '6379:6379'
-    volumes:
-      - redis-data:/data
     healthcheck:
       test: ['CMD', 'redis-cli', 'ping']
       interval: 5s
       timeout: 3s
       retries: 5
-    networks:
-      - lighthouse-network
 
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     container_name: lighthouse-api
     ports:
       - '3000:3000'
-      - '9090:9090'
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - NODE_ENV=production
-      - WORKER_CONCURRENCY=${WORKER_CONCURRENCY}
-      - API_KEY=${API_KEY}
-      - JWT_SECRET=${JWT_SECRET}
-      - DASHBOARD_PASSWORD_HASH=${DASHBOARD_PASSWORD_HASH}
+      - WORKER_CONCURRENCY=1
+      - API_KEY=wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=
     depends_on:
       redis:
         condition: service_healthy
-    healthcheck:
-      test: ['CMD-SHELL', 'curl -f http://localhost:3000/health || exit 1']
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-    deploy:
-      resources:
-        limits:
-          cpus: '2'
-          memory: 4G
-        reservations:
-          cpus: '1'
-          memory: 2G
-    networks:
-      - lighthouse-network
-    # Add shared memory for Chrome
-    shm_size: '2gb'
-
-volumes:
-  redis-data:
-
-networks:
-  lighthouse-network:
-    driver: bridge

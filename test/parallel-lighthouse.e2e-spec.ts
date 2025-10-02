@@ -1,7 +1,7 @@
 // Set WORKER_CONCURRENCY before any imports
-// Use CI value if set, otherwise default to 8 for local testing
+// Use the value from .env which is 3
 if (!process.env.WORKER_CONCURRENCY) {
-  process.env.WORKER_CONCURRENCY = '8';
+  process.env.WORKER_CONCURRENCY = '3';
 }
 
 import { Test, TestingModule } from '@nestjs/testing';
