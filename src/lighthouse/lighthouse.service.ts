@@ -46,7 +46,7 @@ export class LighthouseService {
     };
   }
 
-  async addBatchAudits(urls: string[], categories?: string[]) {
+  async addBatchAudits(urls: string[], categories?: string[], webhookUrl?: string, webhookToken?: string) {
     const batchId = randomUUID();
     const jobIds: string[] = [];
 
@@ -60,6 +60,8 @@ export class LighthouseService {
           url,
           categories,
           jobId,
+          webhookUrl,
+          webhookToken,
         },
         {
           jobId,

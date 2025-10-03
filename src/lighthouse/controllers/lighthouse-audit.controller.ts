@@ -67,6 +67,8 @@ export class LighthouseAuditController {
     return this.lighthouseService.addBatchAudits(
       batchDto.urls,
       batchDto.categories,
+      batchDto.webhookUrl,
+      batchDto.webhookToken,
     );
   }
 

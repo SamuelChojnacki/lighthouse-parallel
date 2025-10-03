@@ -6,7 +6,7 @@ Cette API permet d'effectuer des audits Lighthouse sur des sites web de manière
 
 ## 📋 Prérequis
 
-- **URL de l'API** : `http://votre-domaine:3000`
+- **URL de l'API** : `https://lighthouse.mitain.com`
 - **Clé API** : Requise pour toutes les requêtes (header `X-API-Key`)
 - **Format des données** : JSON
 
@@ -15,7 +15,7 @@ Cette API permet d'effectuer des audits Lighthouse sur des sites web de manière
 Toutes les requêtes doivent inclure la clé API dans les headers :
 
 ```http
-X-API-Key: votre-cle-api
+X-API-Key: wKuU92vSNq67J16/GF55q1s5SYgztBy5vqQ9lILuM+I=
 Content-Type: application/json
 ```
 
@@ -32,7 +32,7 @@ Crée un audit Lighthouse pour une URL unique.
 ```json
 {
   "url": "https://example.com",
-  "categories": ["performance", "accessibility"]  // Optionnel
+  "categories": ["performance", "accessibility", "seo", "best-practices"]  // Optionnel
 }
 ```
 

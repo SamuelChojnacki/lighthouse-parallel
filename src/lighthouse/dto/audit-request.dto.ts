@@ -39,4 +39,20 @@ export class BatchAuditDto {
   @IsArray()
   @IsString({ each: true })
   categories?: string[];
+
+  @ApiPropertyOptional({
+    description: 'Webhook URL to receive results when each job completes',
+    example: 'http://localhost:1337/api/webhooks/lighthouse-results',
+  })
+  @IsOptional()
+  @IsUrl({ require_tld: false })
+  webhookUrl?: string;
+
+  @ApiPropertyOptional({
+    description: 'Bearer token for webhook authentication',
+    example: 'dev-webhook-token-change-in-production',
+  })
+  @IsOptional()
+  @IsString()
+  webhookToken?: string;
 }
