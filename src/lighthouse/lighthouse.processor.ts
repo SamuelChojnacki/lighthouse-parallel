@@ -34,11 +34,9 @@ console.log(`[LighthouseProcessor] Configuration:`, {
   ...(workerConcurrency && { concurrency: workerConcurrency }),
   lockDuration: 150000,  // 150 seconds (> 120s Lighthouse timeout)
 })
-export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, OnModuleInit {
+export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
   private readonly logger = new Logger(LighthouseProcessor.name);
   private readonly concurrency: number;
-  private activeJobs = 0;
-  private shutdownTimeout = 120000; // 2 minutes max wait
 
   constructor(
     private configService: ConfigService,
@@ -75,30 +73,13 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, 
     return this.concurrency;
   }
 
-  async onModuleDestroy() {
-    this.logger.log('Graceful shutdown initiated, waiting for active jobs to complete...');
-
-    const startTime = Date.now();
-    while (this.activeJobs > 0 && Date.now() - startTime < this.shutdownTimeout) {
-      this.logger.log(`Waiting for ${this.activeJobs} active jobs to complete...`);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
-
-    if (this.activeJobs > 0) {
-      this.logger.warn(`Shutdown timeout reached. ${this.activeJobs} jobs still active.`);
-    } else {
-      this.logger.log('All jobs completed successfully. Processor shutdown complete.');
-    }
-  }
 
   async process(job: Job<LighthouseJobData>): Promise<any> {
     const { url, categories, webhookUrl, webhookToken } = job.data;
     const startTime = Date.now();
 
-    this.activeJobs++;
     this.metricsService.recordJobStart();
-    this.metricsService.updateActiveWorkers(this.activeJobs);
-    this.logger.log(`Starting Lighthouse audit for ${url} (Job: ${job.id}) - Active jobs: ${this.activeJobs}`);
+    this.logger.log(`Starting Lighthouse audit for ${url} (Job: ${job.id})`);
 
     try {
       const result = await new Promise((resolve, reject) => {
@@ -190,9 +171,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleDestroy, 
 
       throw error;
     } finally {
-      this.activeJobs--;
-      this.metricsService.updateActiveWorkers(this.activeJobs);
-      this.logger.log(`Job completed for ${url} - Active jobs: ${this.activeJobs}`);
+      this.logger.log(`Job processing finished for ${url}`);
     }
   }
 
