@@ -42,6 +42,7 @@ async function runLighthouseAudit(url, options = {}) {
       logLevel: 'error',
       output: 'json',
       onlyCategories: options.categories || ['performance'],
+      locale: options.locale || 'en', // Support for custom locale (default: English)
       port: chrome.port,
       formFactor: 'mobile',
       throttling: {

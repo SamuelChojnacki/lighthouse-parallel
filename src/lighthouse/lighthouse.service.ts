@@ -17,7 +17,7 @@ export class LighthouseService {
     private metricsService: LighthouseMetricsService,
   ) {}
 
-  async addAudit(url: string, categories?: string[]) {
+  async addAudit(url: string, categories?: string[], locale?: string) {
     const jobId = randomUUID();
 
     const job = await this.lighthouseQueue.add(
@@ -25,6 +25,7 @@ export class LighthouseService {
       {
         url,
         categories,
+        locale,
         jobId,
       },
       {
@@ -46,7 +47,7 @@ export class LighthouseService {
     };
   }
 
-  async addBatchAudits(urls: string[], categories?: string[], webhookUrl?: string, webhookToken?: string) {
+  async addBatchAudits(urls: string[], categories?: string[], webhookUrl?: string, webhookToken?: string, locale?: string) {
     const batchId = randomUUID();
     const jobIds: string[] = [];
 
@@ -59,6 +60,7 @@ export class LighthouseService {
         {
           url,
           categories,
+          locale,
           jobId,
           webhookUrl,
           webhookToken,

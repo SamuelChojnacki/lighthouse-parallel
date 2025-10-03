@@ -42,6 +42,7 @@ export class LighthouseAuditController {
     return this.lighthouseService.addAudit(
       auditDto.url,
       auditDto.categories,
+      auditDto.locale,
     );
   }
 
@@ -69,6 +70,7 @@ export class LighthouseAuditController {
       batchDto.categories,
       batchDto.webhookUrl,
       batchDto.webhookToken,
+      batchDto.locale,
     );
   }
 

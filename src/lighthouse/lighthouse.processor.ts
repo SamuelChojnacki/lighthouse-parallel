@@ -13,6 +13,7 @@ import { LighthouseMetricsService } from '../metrics/lighthouse-metrics.service'
 export interface LighthouseJobData {
   url: string;
   categories?: string[];
+  locale?: string;
   jobId: string;
   webhookUrl?: string;
   webhookToken?: string;
@@ -75,7 +76,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
 
 
   async process(job: Job<LighthouseJobData>): Promise<any> {
-    const { url, categories, webhookUrl, webhookToken } = job.data;
+    const { url, categories, locale, webhookUrl, webhookToken } = job.data;
     const startTime = Date.now();
 
     this.metricsService.recordJobStart();
@@ -145,7 +146,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
         child.send({
           type: 'RUN_AUDIT',
           url,
-          options: { categories },
+          options: { categories, locale },
         });
       });
 

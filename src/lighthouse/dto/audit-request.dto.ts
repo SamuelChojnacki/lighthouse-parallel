@@ -18,6 +18,14 @@ export class AuditRequestDto {
   @IsArray()
   @IsString({ each: true })
   categories?: string[];
+
+  @ApiPropertyOptional({
+    description: 'Locale for the Lighthouse report (e.g., en, fr, es, de, ja, etc.)',
+    example: 'fr',
+  })
+  @IsOptional()
+  @IsString()
+  locale?: string;
 }
 
 export class BatchAuditDto {
@@ -55,4 +63,12 @@ export class BatchAuditDto {
   @IsOptional()
   @IsString()
   webhookToken?: string;
+
+  @ApiPropertyOptional({
+    description: 'Locale for the Lighthouse report (e.g., en, fr, es, de, ja, etc.)',
+    example: 'fr',
+  })
+  @IsOptional()
+  @IsString()
+  locale?: string;
 }
