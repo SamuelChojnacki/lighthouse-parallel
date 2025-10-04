@@ -76,8 +76,8 @@ Lighthouse Parallel is a **high-performance API** that enables running Google Li
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/lighthouse-parallel.git
-cd lighthouse-parallel
+git clone https://github.com/SamuelChojnacki/lighthouse-parallele.git
+cd lighthouse-parallele
 
 # Generate secure credentials
 node -e "console.log(require('crypto').randomBytes(32).toString('base64'))" > .api-key
@@ -487,9 +487,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📧 Email: support@lighthouse-parallel.dev
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/lighthouse-parallel/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/lighthouse-parallel/discussions)
-- 📖 Documentation: [Wiki](https://github.com/yourusername/lighthouse-parallel/wiki)
+- 🐛 Issues: [GitHub Issues](https://github.com/SamuelChojnacki/lighthouse-parallele/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/SamuelChojnacki/lighthouse-parallele/discussions)
+- 📖 Documentation: [Wiki](https://github.com/SamuelChojnacki/lighthouse-parallele/wiki)
 
 ---
 

@@ -37,13 +37,13 @@ This project and everyone participating in it is governed by our Code of Conduct
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/yourusername/lighthouse-parallel.git
-   cd lighthouse-parallel
+   git clone https://github.com/SamuelChojnacki/lighthouse-parallele.git
+   cd lighthouse-parallele
    ```
 
 3. **Add upstream remote**:
    ```bash
-   git remote add upstream https://github.com/original/lighthouse-parallel.git
+   git remote add upstream https://github.com/SamuelChojnacki/lighthouse-parallele.git
    ```
 
 4. **Create a branch** for your changes:
@@ -443,9 +443,9 @@ lighthouse-parallel/
 
 ## Getting Help
 
-- 📖 **Documentation**: Check the [Wiki](https://github.com/yourusername/lighthouse-parallel/wiki)
-- 💬 **Discussions**: Ask questions in [GitHub Discussions](https://github.com/yourusername/lighthouse-parallel/discussions)
-- 🐛 **Issues**: Report bugs in [GitHub Issues](https://github.com/yourusername/lighthouse-parallel/issues)
+- 📖 **Documentation**: Check the [Wiki](https://github.com/SamuelChojnacki/lighthouse-parallele/wiki)
+- 💬 **Discussions**: Ask questions in [GitHub Discussions](https://github.com/SamuelChojnacki/lighthouse-parallele/discussions)
+- 🐛 **Issues**: Report bugs in [GitHub Issues](https://github.com/SamuelChojnacki/lighthouse-parallele/issues)
 - 💌 **Email**: Contact maintainers at dev@lighthouse-parallel.dev
 
 ## Recognition
