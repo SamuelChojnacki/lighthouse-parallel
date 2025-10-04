@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Upgrade npm to latest
+        run: npm install -g npm@latest
+
       - name: Install backend dependencies
         run: npm ci
 
