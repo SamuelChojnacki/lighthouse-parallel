@@ -1,7 +1,7 @@
 # 🚀 I Just Shipped an API That Runs 100 Lighthouse Audits in 10 Minutes (Open Source)
 
 <div align="center">
-  <img src="./logo.png" alt="Lighthouse Parallele" width="400" />
+  <img src="https://github.com/SamuelChojnacki/lighthouse-parallele/blob/main/logo.png?raw=true" alt="Lighthouse Parallele" width="400" />
 </div>
 
 ---
