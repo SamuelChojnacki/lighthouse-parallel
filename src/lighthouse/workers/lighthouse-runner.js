@@ -91,8 +91,8 @@ process.on('message', async (msg) => {
     const result = await runLighthouseAudit(msg.url, msg.options);
     if (process.send) {
       process.send({ type: 'AUDIT_RESULT', result });
-      // Wait longer for IPC message to flush before exiting (especially under high load)
-      setTimeout(() => process.exit(0), 500);
+      // Parent will kill this process after receiving the result
+      // No timeout needed - parent controls lifecycle completely
     } else {
       process.exit(1);
     }
@@ -110,7 +110,7 @@ process.on('uncaughtException', (error) => {
         stack: error.stack,
       },
     });
-    setTimeout(() => process.exit(1), 100);
+    // Parent will kill this process after receiving the error result
   } else {
     process.exit(1);
   }

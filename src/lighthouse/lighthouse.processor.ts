@@ -114,12 +114,12 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
               this.logger.log(
                 `Completed audit for ${url} in ${msg.result.duration}ms`,
               );
-              // Kill child immediately after receiving result to prevent race conditions
-              child.kill('SIGTERM');
+              // Kill child immediately with SIGKILL (parent controls lifecycle completely)
+              child.kill('SIGKILL');
               resolve(msg.result);
             } else {
               this.logger.error(`Audit failed for ${url}: ${msg.result.error}`);
-              child.kill('SIGTERM');
+              child.kill('SIGKILL');
               reject(new Error(msg.result.error));
             }
           }
