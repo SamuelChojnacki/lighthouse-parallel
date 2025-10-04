@@ -91,8 +91,8 @@ process.on('message', async (msg) => {
     const result = await runLighthouseAudit(msg.url, msg.options);
     if (process.send) {
       process.send({ type: 'AUDIT_RESULT', result });
-      // Wait for IPC message to flush before exiting
-      setTimeout(() => process.exit(0), 100);
+      // Wait longer for IPC message to flush before exiting (especially under high load)
+      setTimeout(() => process.exit(0), 500);
     } else {
       process.exit(1);
     }
