@@ -1,15 +1,16 @@
 import lighthouse from 'lighthouse';
 import chromeLauncher from 'chrome-launcher';
+import type { Result as LHResult, Locale } from 'lighthouse';
 
-interface LighthouseOptions {
+export interface LighthouseOptions {
   categories?: string[];
   locale?: string;
 }
 
-interface LighthouseResult {
+export interface LighthouseResult {
   success: boolean;
   url: string;
-  lhr?: any;
+  lhr?: LHResult;
   report?: string;
   duration?: number;
   timestamp: string;
@@ -17,13 +18,13 @@ interface LighthouseResult {
   stack?: string;
 }
 
-interface ParentMessage {
+export interface ParentMessage {
   type: 'RUN_AUDIT';
   url: string;
   options: LighthouseOptions;
 }
 
-interface ChildMessage {
+export interface ChildMessage {
   type: 'AUDIT_RESULT';
   result: LighthouseResult;
 }
@@ -72,7 +73,7 @@ async function runLighthouseAudit(
       logLevel: 'error' as const,
       output: 'json' as const,
       onlyCategories: options.categories || ['performance'],
-      locale: (options.locale || 'en') as any,
+      locale: (options.locale || 'en') as Locale,
       port: chrome.port,
       formFactor: 'mobile' as const,
       throttling: {
@@ -115,23 +116,24 @@ async function runLighthouseAudit(
     };
   } finally {
     if (chrome) {
-      await chrome.kill();
+      chrome.kill();
     }
   }
 }
 
 // Handle messages from parent process
-process.on('message', async (msg: ParentMessage) => {
+process.on('message', (msg: ParentMessage) => {
   if (msg.type === 'RUN_AUDIT') {
-    const result = await runLighthouseAudit(msg.url, msg.options);
-    if (process.send) {
-      const response: ChildMessage = { type: 'AUDIT_RESULT', result };
-      process.send(response);
-      // Parent will kill this process after receiving the result
-      // No timeout needed - parent controls lifecycle completely
-    } else {
-      process.exit(1);
-    }
+    void runLighthouseAudit(msg.url, msg.options).then((result) => {
+      if (process.send) {
+        const response: ChildMessage = { type: 'AUDIT_RESULT', result };
+        process.send(response);
+        // Parent will kill this process after receiving the result
+        // No timeout needed - parent controls lifecycle completely
+      } else {
+        process.exit(1);
+      }
+    });
   }
 });
 

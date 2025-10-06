@@ -25,6 +25,7 @@ function printBanner(port: number | string) {
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
   `;
+  // eslint-disable-next-line no-console
   console.log('\x1b[36m%s\x1b[0m', banner);
 }
 
@@ -114,21 +115,22 @@ async function bootstrap() {
   printBanner(port);
 
   // Graceful shutdown handling
-  const signals: NodeJS.Signals[] = ['SIGTERM', 'SIGINT'];
+  const signals = ['SIGTERM', 'SIGINT'] as const;
 
   signals.forEach((signal) => {
-    process.on(signal, async () => {
+    process.on(signal, () => {
       logger.log(`Received ${signal}, starting graceful shutdown...`);
 
-      try {
-        // Close HTTP server (stop accepting new connections)
-        await app.close();
-        logger.log('Application closed successfully');
-        process.exit(0);
-      } catch (error) {
-        logger.error('Error during shutdown:', error);
-        process.exit(1);
-      }
+      void app
+        .close()
+        .then(() => {
+          logger.log('Application closed successfully');
+          process.exit(0);
+        })
+        .catch((error: unknown) => {
+          logger.error('Error during shutdown:', error);
+          process.exit(1);
+        });
     });
   });
 }

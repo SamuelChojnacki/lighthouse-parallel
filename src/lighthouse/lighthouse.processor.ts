@@ -5,6 +5,7 @@ import { ConfigService } from '@nestjs/config';
 import { fork, ChildProcess } from 'child_process';
 import { join } from 'path';
 import { LighthouseMetricsService } from '../metrics/lighthouse-metrics.service';
+import type { LighthouseResult, ChildMessage } from './workers/lighthouse-runner';
 
 export interface LighthouseJobData {
   url: string;
@@ -54,7 +55,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
     return this.concurrency;
   }
 
-  async process(job: Job<LighthouseJobData>): Promise<any> {
+  async process(job: Job<LighthouseJobData>): Promise<LighthouseResult> {
     const { url, categories, locale, webhookUrl, webhookToken } = job.data;
     const startTime = Date.now();
 
@@ -62,7 +63,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
     this.logger.log(`Starting Lighthouse audit for ${url} (Job: ${job.id})`);
 
     try {
-      const result = await new Promise((resolve, reject) => {
+      const result = await new Promise<LighthouseResult>((resolve, reject) => {
         const workerPath = join(__dirname, 'workers', 'lighthouse-runner.js');
 
         // Fork a child process for isolation
@@ -84,7 +85,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
         }, 120000);
 
         // Handle messages from child process
-        child.on('message', (msg: any) => {
+        child.on('message', (msg: ChildMessage) => {
           if (msg.type === 'AUDIT_RESULT' && !resultReceived) {
             resultReceived = true;
             clearTimeout(timeout);
@@ -163,12 +164,33 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
   }
 
   /**
+   * Format Lighthouse scores for IncluScan (multiply by 100: Lighthouse uses 0-1, IncluScan expects 0-100)
+   */
+  private formatScoresForWebhook(
+    state: 'completed' | 'failed',
+    result: LighthouseResult | { error: string },
+  ) {
+    if (state === 'completed' && 'lhr' in result && result.lhr?.categories) {
+      return {
+        ...result,
+        scores: {
+          performance: (result.lhr.categories.performance?.score || 0) * 100,
+          accessibility: (result.lhr.categories.accessibility?.score || 0) * 100,
+          seo: (result.lhr.categories.seo?.score || 0) * 100,
+          'best-practices': (result.lhr.categories['best-practices']?.score || 0) * 100,
+        },
+      };
+    }
+    return result;
+  }
+
+  /**
    * Send webhook notification with job results (fire-and-forget pattern)
    */
   private async sendWebhook(
     jobId: string,
     state: 'completed' | 'failed',
-    result: any,
+    result: LighthouseResult | { error: string },
     webhookUrl: string,
     webhookToken?: string,
   ): Promise<void> {
@@ -181,19 +203,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
         headers['Authorization'] = `Bearer ${webhookToken}`;
       }
 
-      // Format scores for IncluScan (multiply by 100: Lighthouse uses 0-1, IncluScan expects 0-100)
-      const formattedResult =
-        state === 'completed' && result.scores
-          ? {
-              ...result,
-              scores: {
-                performance: (result.scores.performance || 0) * 100,
-                accessibility: (result.scores.accessibility || 0) * 100,
-                seo: (result.scores.seo || 0) * 100,
-                'best-practices': (result.scores['best-practices'] || 0) * 100,
-              },
-            }
-          : result;
+      const formattedResult = this.formatScoresForWebhook(state, result);
 
       const response = await fetch(webhookUrl, {
         method: 'POST',

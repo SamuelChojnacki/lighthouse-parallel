@@ -67,8 +67,9 @@ export class ApiKeyGuard implements CanActivate {
     }
 
     if (apiKey !== validApiKey) {
+      const maskedKey = apiKey.substring(0, 8);
       this.logger.warn(
-        `Unauthorized access attempt to ${request.method} ${request.url} - Invalid API Key: ${apiKey.substring(0, 8)}...`,
+        `Unauthorized access attempt to ${request.method} ${request.url} - Invalid API Key: ${maskedKey}...`,
       );
       throw new UnauthorizedException('Invalid API Key');
     }

@@ -44,8 +44,11 @@ export class LighthouseCleanupService {
     const totalCleaned = completedCleaned.length + failedCleaned.length;
     const stats = await this.lighthouseService.getQueueStats();
 
+    const completedCount = completedCleaned.length;
+    const failedCount = failedCleaned.length;
     this.logger.log(
-      `Complete cleanup done. Removed ${totalCleaned} jobs (${completedCleaned.length} completed, ${failedCleaned.length} failed), cleared all batches`,
+      `Complete cleanup done. Removed ${totalCleaned} jobs ` +
+        `(${completedCount} completed, ${failedCount} failed), cleared all batches`,
     );
 
     return {

@@ -132,7 +132,7 @@ export class LighthouseService {
 
     // Calculate timing stats
     const completedJobs = jobs.filter(
-      (j) => j?.status === 'completed' && j?.finishedOn && j?.processedOn
+      (j) => j?.status === 'completed' && j?.finishedOn && j?.processedOn,
     );
     const avgDuration =
       completedJobs.length > 0

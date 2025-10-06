@@ -39,7 +39,7 @@ export class TokenGuard implements CanActivate {
       const secret = this.configService.get<string>('JWT_SECRET');
       this.jwtService.verify(token, { secret });
       return true;
-    } catch (error) {
+    } catch {
       throw new UnauthorizedException(AUTH_ERROR_MESSAGES.INVALID_TOKEN);
     }
   }

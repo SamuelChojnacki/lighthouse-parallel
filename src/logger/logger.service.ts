@@ -103,7 +103,7 @@ export class LoggerService implements NestLoggerService {
             context: parsed.context,
             trace: parsed.trace,
           });
-        } catch (e) {
+        } catch {
           // Ignorer les lignes qui ne sont pas du JSON valide
         }
       }
@@ -152,7 +152,9 @@ export class LoggerService implements NestLoggerService {
   }
 
   private formatBytes(bytes: number): string {
-    if (bytes === 0) return '0 Bytes';
+    if (bytes === 0) {
+      return '0 Bytes';
+    }
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
