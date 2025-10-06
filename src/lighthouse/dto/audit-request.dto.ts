@@ -7,10 +7,11 @@ export class AuditRequestDto {
     example: 'https://example.com',
   })
   @IsUrl()
-  url: string;
+  url!: string;
 
   @ApiPropertyOptional({
-    description: 'Lighthouse categories to audit (performance, accessibility, best-practices, seo, pwa)',
+    description:
+      'Lighthouse categories to audit (performance, accessibility, best-practices, seo, pwa)',
     example: ['performance', 'accessibility'],
     type: [String],
   })
@@ -36,10 +37,11 @@ export class BatchAuditDto {
   })
   @IsArray()
   @IsUrl({}, { each: true })
-  urls: string[];
+  urls!: string[];
 
   @ApiPropertyOptional({
-    description: 'Lighthouse categories to audit for all URLs (performance, accessibility, best-practices, seo, pwa)',
+    description:
+      'Lighthouse categories to audit for all URLs (performance, accessibility, best-practices, seo, pwa)',
     example: ['performance', 'accessibility'],
     type: [String],
   })

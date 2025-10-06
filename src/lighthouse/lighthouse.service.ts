@@ -47,7 +47,13 @@ export class LighthouseService {
     };
   }
 
-  async addBatchAudits(urls: string[], categories?: string[], webhookUrl?: string, webhookToken?: string, locale?: string) {
+  async addBatchAudits(
+    urls: string[],
+    categories?: string[],
+    webhookUrl?: string,
+    webhookToken?: string,
+    locale?: string,
+  ) {
     const batchId = randomUUID();
     const jobIds: string[] = [];
 
@@ -117,25 +123,27 @@ export class LighthouseService {
       return null;
     }
 
-    const jobs = await Promise.all(
-      batch.jobIds.map((jobId) => this.getJobStatus(jobId)),
-    );
+    const jobs = await Promise.all(batch.jobIds.map((jobId) => this.getJobStatus(jobId)));
 
     const completed = jobs.filter((j) => j?.status === 'completed').length;
     const failed = jobs.filter((j) => j?.status === 'failed').length;
     const active = jobs.filter((j) => j?.status === 'active').length;
-    const waiting = jobs.filter(
-      (j) => j?.status === 'waiting' || j?.status === 'delayed',
-    ).length;
+    const waiting = jobs.filter((j) => j?.status === 'waiting' || j?.status === 'delayed').length;
 
     // Calculate timing stats
-    const completedJobs = jobs.filter((j) => j?.status === 'completed' && j?.finishedOn);
-    const avgDuration = completedJobs.length > 0
-      ? completedJobs.reduce((sum, j) => {
-          const duration = j.finishedOn - j.processedOn;
-          return sum + duration;
-        }, 0) / completedJobs.length
-      : 0;
+    const completedJobs = jobs.filter(
+      (j) => j?.status === 'completed' && j?.finishedOn && j?.processedOn
+    );
+    const avgDuration =
+      completedJobs.length > 0
+        ? completedJobs.reduce((sum, j) => {
+            if (j && j.finishedOn && j.processedOn) {
+              const duration = j.finishedOn - j.processedOn;
+              return sum + duration;
+            }
+            return sum;
+          }, 0) / completedJobs.length
+        : 0;
 
     return {
       batchId,
@@ -156,12 +164,13 @@ export class LighthouseService {
     const batchesWithStats = await Promise.all(
       batchIds.map(async (batchId) => {
         const batch = this.batches.get(batchId);
-        const jobs = await Promise.all(
-          batch.jobIds.map((jobId) => this.getJobStatus(jobId)),
-        );
+        if (!batch) {
+          return null;
+        }
+        const jobs = await Promise.all(batch.jobIds.map((jobId) => this.getJobStatus(jobId)));
 
         // Si tous les jobs ont été supprimés (cleanup), on nettoie le batch
-        const validJobs = jobs.filter(j => j !== null);
+        const validJobs = jobs.filter((j) => j !== null);
         if (validJobs.length === 0) {
           this.batches.delete(batchId);
           this.logger.log(`Removed batch ${batchId} (all jobs cleaned)`);
@@ -175,10 +184,16 @@ export class LighthouseService {
           (j) => j?.status === 'waiting' || j?.status === 'delayed',
         ).length;
 
-        const status = active > 0 ? 'processing' :
-                      waiting > 0 ? 'waiting' :
-                      completed === batch.jobIds.length ? 'completed' :
-                      failed > 0 ? 'partial' : 'unknown';
+        const status =
+          active > 0
+            ? 'processing'
+            : waiting > 0
+              ? 'waiting'
+              : completed === batch.jobIds.length
+                ? 'completed'
+                : failed > 0
+                  ? 'partial'
+                  : 'unknown';
 
         return {
           batchId,
@@ -194,7 +209,7 @@ export class LighthouseService {
     );
 
     // Filtrer les batches null et trier par plus récent
-    return batchesWithStats.filter(b => b !== null).reverse();
+    return batchesWithStats.filter((b) => b !== null).reverse();
   }
 
   async getQueueStats(): Promise<QueueStats> {

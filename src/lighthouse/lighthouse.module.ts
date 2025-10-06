@@ -16,10 +16,6 @@ import { MetricsModule } from '../metrics/metrics.module';
     MetricsModule,
   ],
   controllers: [LighthouseAuditController, LighthouseAdminController],
-  providers: [
-    LighthouseService,
-    LighthouseProcessor,
-    LighthouseCleanupService,
-  ],
+  providers: [LighthouseService, LighthouseProcessor, LighthouseCleanupService],
 })
 export class LighthouseModule {}

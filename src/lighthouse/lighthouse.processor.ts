@@ -1,10 +1,6 @@
-// Load dotenv before anything else to make env vars available in decorators
-import * as dotenv from 'dotenv';
-dotenv.config();
-
 import { Processor, WorkerHost, OnWorkerEvent } from '@nestjs/bullmq';
 import { Job } from 'bullmq';
-import { Logger, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
+import { Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { fork, ChildProcess } from 'child_process';
 import { join } from 'path';
@@ -19,21 +15,8 @@ export interface LighthouseJobData {
   webhookToken?: string;
 }
 
-// Get concurrency from environment with fallback
-const workerConcurrency = process.env.WORKER_CONCURRENCY
-  ? parseInt(process.env.WORKER_CONCURRENCY, 10)
-  : undefined;
-
-// Log configuration at module load
-console.log(`[LighthouseProcessor] Configuration:`, {
-  WORKER_CONCURRENCY_ENV: process.env.WORKER_CONCURRENCY,
-  workerConcurrency: workerConcurrency,
-  willSetConcurrency: !!workerConcurrency
-});
-
 @Processor('lighthouse-audits', {
-  ...(workerConcurrency && { concurrency: workerConcurrency }),
-  lockDuration: 150000,  // 150 seconds (> 120s Lighthouse timeout)
+  lockDuration: 150000, // 150 seconds (> 120s Lighthouse timeout)
 })
 export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
   private readonly logger = new Logger(LighthouseProcessor.name);
@@ -44,25 +27,22 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
     private metricsService: LighthouseMetricsService,
   ) {
     super();
-    const concurrencyValue = parseInt(this.configService.get<string>('WORKER_CONCURRENCY', '10'), 10);
-    this.concurrency = Number.isFinite(concurrencyValue) && concurrencyValue > 0 ? concurrencyValue : 10;
+    const concurrencyValue = parseInt(
+      this.configService.get<string>('WORKER_CONCURRENCY', '10'),
+      10,
+    );
+    this.concurrency =
+      Number.isFinite(concurrencyValue) && concurrencyValue > 0 ? concurrencyValue : 10;
     this.logger.log(`Processor initialized with concurrency: ${this.concurrency}`);
   }
 
   onModuleInit() {
-    // Log actual worker configuration
-    this.logger.log(`Worker configuration:`, {
-      configuredConcurrency: this.concurrency,
-      actualWorkerConcurrency: this.worker?.concurrency,
-      envValue: process.env.WORKER_CONCURRENCY
-    });
-
     // Update worker concurrency dynamically after initialization
     if (this.worker && Number.isFinite(this.concurrency) && this.concurrency > 0) {
       this.worker.concurrency = this.concurrency;
       this.logger.log(`Worker concurrency set to: ${this.concurrency}`);
     } else {
-      this.logger.warn(`Invalid concurrency value: ${this.concurrency}, keeping default`);
+      this.logger.warn(`Invalid concurrency value: ${this.concurrency}, using default`);
     }
   }
 
@@ -73,7 +53,6 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
   getMaxConcurrency(): number {
     return this.concurrency;
   }
-
 
   async process(job: Job<LighthouseJobData>): Promise<any> {
     const { url, categories, locale, webhookUrl, webhookToken } = job.data;
@@ -111,9 +90,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
             clearTimeout(timeout);
 
             if (msg.result.success) {
-              this.logger.log(
-                `Completed audit for ${url} in ${msg.result.duration}ms`,
-              );
+              this.logger.log(`Completed audit for ${url} in ${msg.result.duration}ms`);
               // Kill child immediately with SIGKILL (parent controls lifecycle completely)
               child.kill('SIGKILL');
               resolve(msg.result);
@@ -157,7 +134,6 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
       const durationSeconds = (Date.now() - startTime) / 1000;
       this.metricsService.recordJobCompleted(durationSeconds, url);
 
-
       // Send webhook if configured
       if (webhookUrl) {
         await this.sendWebhook(job.id as string, 'completed', result, webhookUrl, webhookToken);
@@ -166,11 +142,18 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
       return result;
     } catch (error) {
       // Record failure
-      this.metricsService.recordJobFailed(error.message || 'unknown');
+      const errorMessage = error instanceof Error ? error.message : 'unknown';
+      this.metricsService.recordJobFailed(errorMessage);
 
       // Send webhook if configured
       if (webhookUrl) {
-        await this.sendWebhook(job.id as string, 'failed', { error: error.message || 'Unknown error' }, webhookUrl, webhookToken);
+        await this.sendWebhook(
+          job.id as string,
+          'failed',
+          { error: errorMessage },
+          webhookUrl,
+          webhookToken,
+        );
       }
 
       throw error;
@@ -187,7 +170,7 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
     state: 'completed' | 'failed',
     result: any,
     webhookUrl: string,
-    webhookToken?: string
+    webhookToken?: string,
   ): Promise<void> {
     try {
       const headers: HeadersInit = {
@@ -199,15 +182,18 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
       }
 
       // Format scores for IncluScan (multiply by 100: Lighthouse uses 0-1, IncluScan expects 0-100)
-      const formattedResult = state === 'completed' && result.scores ? {
-        ...result,
-        scores: {
-          performance: (result.scores.performance || 0) * 100,
-          accessibility: (result.scores.accessibility || 0) * 100,
-          seo: (result.scores.seo || 0) * 100,
-          'best-practices': (result.scores['best-practices'] || 0) * 100,
-        }
-      } : result;
+      const formattedResult =
+        state === 'completed' && result.scores
+          ? {
+              ...result,
+              scores: {
+                performance: (result.scores.performance || 0) * 100,
+                accessibility: (result.scores.accessibility || 0) * 100,
+                seo: (result.scores.seo || 0) * 100,
+                'best-practices': (result.scores['best-practices'] || 0) * 100,
+              },
+            }
+          : result;
 
       const response = await fetch(webhookUrl, {
         method: 'POST',
@@ -223,7 +209,8 @@ export class LighthouseProcessor extends WorkerHost implements OnModuleInit {
       this.logger.log(`✅ Webhook sent successfully for job ${jobId} to ${webhookUrl}`);
     } catch (error) {
       // Fire-and-forget: log error but don't fail the job
-      this.logger.error(`❌ Failed to send webhook for job ${jobId}: ${error.message}`);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      this.logger.error(`❌ Failed to send webhook for job ${jobId}: ${errorMessage}`);
     }
   }
 

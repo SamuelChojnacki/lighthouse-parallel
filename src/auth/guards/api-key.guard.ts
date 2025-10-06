@@ -28,7 +28,7 @@ export class ApiKeyGuard implements CanActivate {
 
     // Allow Swagger UI and documentation paths (but all API endpoints require auth)
     const swaggerPaths = ['/api', '/api-json', '/api-yaml'];
-    if (swaggerPaths.some(path => request.url.startsWith(path))) {
+    if (swaggerPaths.some((path) => request.url.startsWith(path))) {
       return true;
     }
 
@@ -43,10 +43,10 @@ export class ApiKeyGuard implements CanActivate {
     }
 
     // Check if endpoint is token-protected (should skip API Key validation)
-    const isTokenProtected = this.reflector.getAllAndOverride<boolean>(
-      IS_TOKEN_PROTECTED_KEY,
-      [context.getHandler(), context.getClass()],
-    );
+    const isTokenProtected = this.reflector.getAllAndOverride<boolean>(IS_TOKEN_PROTECTED_KEY, [
+      context.getHandler(),
+      context.getClass(),
+    ]);
 
     if (isTokenProtected) {
       return true; // Skip API Key check, TokenGuard will handle it
@@ -55,12 +55,8 @@ export class ApiKeyGuard implements CanActivate {
     const validApiKey = this.configService.get<string>('API_KEY');
 
     if (!validApiKey) {
-      this.logger.error(
-        'API_KEY not configured in environment variables. Security is disabled!',
-      );
-      throw new UnauthorizedException(
-        'API security not properly configured',
-      );
+      this.logger.error('API_KEY not configured in environment variables. Security is disabled!');
+      throw new UnauthorizedException('API security not properly configured');
     }
 
     if (!apiKey) {

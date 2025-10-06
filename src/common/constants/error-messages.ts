@@ -11,10 +11,3 @@ export const AUTH_ERROR_MESSAGES = {
   PASSWORD_NOT_CONFIGURED: 'Dashboard password not configured on server',
   INVALID_HEADER_FORMAT: 'Invalid authorization header format',
 } as const;
-
-export const API_ERROR_MESSAGES = {
-  CONFIG_FETCH_FAILED: 'Failed to fetch API configuration',
-  API_KEY_NOT_FOUND: 'API Key not found in configuration',
-  LOGIN_FAILED: 'Login failed',
-  NO_TOKEN_RECEIVED: 'No token received from server',
-} as const;

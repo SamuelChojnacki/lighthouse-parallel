@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { LighthouseService } from './lighthouse.service';
-import { CleanupResult, CleanupAllResult } from './interfaces/queue-stats.interface';
+import { CleanupAllResult } from './interfaces/queue-stats.interface';
 
 @Injectable()
 export class LighthouseCleanupService {

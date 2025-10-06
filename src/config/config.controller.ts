@@ -1,11 +1,6 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import {
-  ApiTags,
-  ApiOperation,
-  ApiResponse,
-  ApiBearerAuth,
-} from '@nestjs/swagger';
+import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
 import { TokenGuard } from '../auth/guards/token.guard';
 import { TokenProtected } from '../auth/decorators/token-protected.decorator';
 
@@ -43,7 +38,7 @@ export class ConfigController {
     description: 'Invalid or missing JWT token',
   })
   getPublicConfig() {
-    const concurrencyValue = this.configService.get<string>('WORKER_CONCURRENCY');
+    const concurrencyValue = this.configService.get<string>('WORKER_CONCURRENCY', '10');
     const workerConcurrency = parseInt(concurrencyValue, 10);
 
     return {

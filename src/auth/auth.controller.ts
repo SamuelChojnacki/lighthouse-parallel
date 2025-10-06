@@ -7,7 +7,7 @@ import { Public } from './decorators/public.decorator';
 class LoginDto {
   @IsString()
   @IsNotEmpty()
-  password: string;
+  password!: string;
 }
 
 @ApiTags('authentication')

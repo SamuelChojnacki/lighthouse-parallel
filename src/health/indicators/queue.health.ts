@@ -31,10 +31,11 @@ export class QueueHealthIndicator extends HealthIndicator {
         failed: counts.failed,
       });
     } catch (error) {
+      const message = error instanceof Error ? error.message : 'Unknown error';
       throw new HealthCheckError(
         'Queue health check failed',
         this.getStatus(key, false, {
-          message: error.message,
+          message,
         }),
       );
     }

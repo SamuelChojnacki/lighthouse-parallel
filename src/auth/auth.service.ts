@@ -22,14 +22,10 @@ export class AuthService {
    * @throws UnauthorizedException if password is invalid
    */
   async validatePassword(password: string): Promise<{ access_token: string }> {
-    const hashedPassword = this.configService.get<string>(
-      'DASHBOARD_PASSWORD_HASH',
-    );
+    const hashedPassword = this.configService.get<string>('DASHBOARD_PASSWORD_HASH');
 
     if (!hashedPassword) {
-      throw new UnauthorizedException(
-        AUTH_ERROR_MESSAGES.PASSWORD_NOT_CONFIGURED,
-      );
+      throw new UnauthorizedException(AUTH_ERROR_MESSAGES.PASSWORD_NOT_CONFIGURED);
     }
 
     // Compare password with bcrypt hash

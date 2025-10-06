@@ -39,11 +39,7 @@ export class LighthouseAuditController {
   })
   @ApiResponse({ status: 400, description: 'Invalid URL or parameters' })
   async createAudit(@Body(ValidationPipe) auditDto: AuditRequestDto) {
-    return this.lighthouseService.addAudit(
-      auditDto.url,
-      auditDto.categories,
-      auditDto.locale,
-    );
+    return this.lighthouseService.addAudit(auditDto.url, auditDto.categories, auditDto.locale);
   }
 
   @Post('batch')

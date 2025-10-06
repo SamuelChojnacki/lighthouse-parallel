@@ -3,7 +3,6 @@ import {
   HealthCheck,
   HealthCheckService,
   MemoryHealthIndicator,
-  DiskHealthIndicator,
 } from '@nestjs/terminus';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { Public } from '../auth/decorators/public.decorator';
@@ -17,7 +16,6 @@ export class HealthController {
   constructor(
     private health: HealthCheckService,
     private memory: MemoryHealthIndicator,
-    private disk: DiskHealthIndicator,
     private redis: RedisHealthIndicator,
     private queue: QueueHealthIndicator,
   ) {}

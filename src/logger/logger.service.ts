@@ -84,7 +84,10 @@ export class LoggerService implements NestLoggerService {
       }
 
       const content = fs.readFileSync(this.currentLogFile, 'utf-8');
-      const lines = content.trim().split('\n').filter((line) => line);
+      const lines = content
+        .trim()
+        .split('\n')
+        .filter((line) => line);
 
       // Parser les dernières lignes (limite)
       const logs: LogEntry[] = [];
@@ -107,7 +110,8 @@ export class LoggerService implements NestLoggerService {
 
       return logs.reverse(); // Plus récents en premier
     } catch (error) {
-      this.error('Failed to read logs', error.stack, 'LoggerService');
+      const errorStack = error instanceof Error ? error.stack : undefined;
+      this.error('Failed to read logs', errorStack, 'LoggerService');
       return [];
     }
   }
@@ -141,7 +145,8 @@ export class LoggerService implements NestLoggerService {
         totalSizeFormatted: file.sizeFormatted,
       };
     } catch (error) {
-      this.error('Failed to get logs stats', error.stack, 'LoggerService');
+      const errorStack = error instanceof Error ? error.stack : undefined;
+      this.error('Failed to get logs stats', errorStack, 'LoggerService');
       return null;
     }
   }
@@ -151,6 +156,6 @@ export class LoggerService implements NestLoggerService {
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+    return Math.round((bytes / Math.pow(k, i)) * 100) / 100 + ' ' + sizes[i];
   }
 }

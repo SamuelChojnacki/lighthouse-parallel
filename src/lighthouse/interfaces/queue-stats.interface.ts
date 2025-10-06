@@ -6,11 +6,6 @@ export interface QueueStats {
   total: number;
 }
 
-export interface CleanupResult {
-  cleaned: number;
-  stats: QueueStats;
-}
-
 export interface CleanupAllResult {
   cleaned: number;
   completedCleaned: number;

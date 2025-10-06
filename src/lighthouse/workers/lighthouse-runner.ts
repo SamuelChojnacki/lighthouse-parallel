@@ -1,12 +1,42 @@
-const lighthouse = require('lighthouse').default || require('lighthouse');
-const chromeLauncher = require('chrome-launcher');
+import lighthouse from 'lighthouse';
+import chromeLauncher from 'chrome-launcher';
+
+interface LighthouseOptions {
+  categories?: string[];
+  locale?: string;
+}
+
+interface LighthouseResult {
+  success: boolean;
+  url: string;
+  lhr?: any;
+  report?: string;
+  duration?: number;
+  timestamp: string;
+  error?: string;
+  stack?: string;
+}
+
+interface ParentMessage {
+  type: 'RUN_AUDIT';
+  url: string;
+  options: LighthouseOptions;
+}
+
+interface ChildMessage {
+  type: 'AUDIT_RESULT';
+  result: LighthouseResult;
+}
 
 /**
  * Worker script that runs in a child process
  * Executes a single Lighthouse audit with isolated Chrome instance
  */
-async function runLighthouseAudit(url, options = {}) {
-  let chrome;
+async function runLighthouseAudit(
+  url: string,
+  options: LighthouseOptions = {},
+): Promise<LighthouseResult> {
+  let chrome: chromeLauncher.LaunchedChrome | undefined;
 
   try {
     // Set Chrome path - force Docker path if Nixpacks path is detected
@@ -18,7 +48,7 @@ async function runLighthouseAudit(url, options = {}) {
     }
 
     // Launch Chrome with unique port (auto-assigned)
-    const launchOptions = {
+    const launchOptions: chromeLauncher.Options = {
       chromeFlags: [
         '--headless',
         '--disable-gpu',
@@ -39,12 +69,12 @@ async function runLighthouseAudit(url, options = {}) {
 
     // Default Lighthouse configuration
     const lighthouseOptions = {
-      logLevel: 'error',
-      output: 'json',
+      logLevel: 'error' as const,
+      output: 'json' as const,
       onlyCategories: options.categories || ['performance'],
-      locale: options.locale || 'en', // Support for custom locale (default: English)
+      locale: (options.locale || 'en') as any,
       port: chrome.port,
-      formFactor: 'mobile',
+      formFactor: 'mobile' as const,
       throttling: {
         rttMs: 150,
         throughputKbps: 1638.4,
@@ -62,20 +92,25 @@ async function runLighthouseAudit(url, options = {}) {
     const runnerResult = await lighthouse(url, lighthouseOptions);
     const duration = Date.now() - startTime;
 
+    if (!runnerResult) {
+      throw new Error('Lighthouse returned no result');
+    }
+
     return {
       success: true,
       url,
       lhr: runnerResult.lhr,
-      report: runnerResult.report,
+      report: Array.isArray(runnerResult.report) ? runnerResult.report[0] : runnerResult.report,
       duration,
       timestamp: new Date().toISOString(),
     };
   } catch (error) {
+    const err = error as Error;
     return {
       success: false,
       url,
-      error: error.message,
-      stack: error.stack,
+      error: err.message,
+      stack: err.stack,
       timestamp: new Date().toISOString(),
     };
   } finally {
@@ -86,11 +121,12 @@ async function runLighthouseAudit(url, options = {}) {
 }
 
 // Handle messages from parent process
-process.on('message', async (msg) => {
+process.on('message', async (msg: ParentMessage) => {
   if (msg.type === 'RUN_AUDIT') {
     const result = await runLighthouseAudit(msg.url, msg.options);
     if (process.send) {
-      process.send({ type: 'AUDIT_RESULT', result });
+      const response: ChildMessage = { type: 'AUDIT_RESULT', result };
+      process.send(response);
       // Parent will kill this process after receiving the result
       // No timeout needed - parent controls lifecycle completely
     } else {
@@ -100,16 +136,19 @@ process.on('message', async (msg) => {
 });
 
 // Handle errors
-process.on('uncaughtException', (error) => {
+process.on('uncaughtException', (error: Error) => {
   if (process.send) {
-    process.send({
+    const response: ChildMessage = {
       type: 'AUDIT_RESULT',
       result: {
         success: false,
         error: error.message,
         stack: error.stack,
+        url: '',
+        timestamp: new Date().toISOString(),
       },
-    });
+    };
+    process.send(response);
     // Parent will kill this process after receiving the error result
   } else {
     process.exit(1);

@@ -37,18 +37,20 @@ async function bootstrap() {
   app.enableShutdownHooks();
 
   // Security headers with Helmet - configured to allow WebAssembly
-  app.use(helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'unsafe-eval'"], // Allow eval for WebAssembly
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: ["'self'", "data:", "https:"],
-        fontSrc: ["'self'", "data:"],
-        connectSrc: ["'self'"],
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: ["'self'"],
+          scriptSrc: ["'self'", "'unsafe-eval'"], // Allow eval for WebAssembly
+          styleSrc: ["'self'", "'unsafe-inline'"],
+          imgSrc: ["'self'", 'data:', 'https:'],
+          fontSrc: ["'self'", 'data:'],
+          connectSrc: ["'self'"],
+        },
       },
-    },
-  }));
+    }),
+  );
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -59,9 +61,7 @@ async function bootstrap() {
   );
 
   // Restrictive CORS - only allow specified origins
-  const corsOrigins = process.env.CORS_ORIGINS?.split(',') || [
-    'http://localhost:5173',
-  ];
+  const corsOrigins = process.env.CORS_ORIGINS?.split(',') || ['http://localhost:5173'];
   app.enableCors({
     origin: corsOrigins,
     credentials: true,
@@ -74,9 +74,9 @@ async function bootstrap() {
     .setTitle('Lighthouse Parallel API')
     .setDescription(
       '🔒 **PROTECTED API** - All endpoints require an API Key.\n\n' +
-      'Production-ready API for running Lighthouse audits in parallel. ' +
-      'Process multiple website performance audits concurrently with configurable workers.\n\n' +
-      '**Authentication:** Click "Authorize" 🔓 below and enter your API Key.',
+        'Production-ready API for running Lighthouse audits in parallel. ' +
+        'Process multiple website performance audits concurrently with configurable workers.\n\n' +
+        '**Authentication:** Click "Authorize" 🔓 below and enter your API Key.',
     )
     .setVersion('1.0')
     .addTag('lighthouse', 'Lighthouse audit operations')
