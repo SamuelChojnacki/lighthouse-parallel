@@ -8,10 +8,25 @@ import { CleanupAllResult } from './interfaces/queue-stats.interface';
 export class LighthouseCleanupService {
   private readonly logger = new Logger(LighthouseCleanupService.name);
 
+  // Grace period before cleaning jobs (default: 5 minutes)
+  // This prevents race conditions where jobs are removed while still finalizing
+  private readonly gracePeriodMs: number;
+
   constructor(
     private readonly lighthouseService: LighthouseService,
     private readonly webhookService: WebhookService,
-  ) {}
+  ) {
+    // Allow configuration via environment variable
+    // Default to 5 minutes (300000ms) to give jobs time to complete
+    this.gracePeriodMs = parseInt(
+      process.env.CLEANUP_GRACE_PERIOD_MS || '300000',
+      10,
+    );
+
+    this.logger.log(
+      `Cleanup grace period: ${this.gracePeriodMs}ms (${this.gracePeriodMs / 60000} minutes)`,
+    );
+  }
 
   /**
    * Hourly cleanup - removes completed jobs only after webhooks are delivered
@@ -54,9 +69,18 @@ export class LighthouseCleanupService {
     // 3. Remove only Lighthouse jobs whose webhook is resolved (or no webhook configured)
     let completedCleaned = 0;
     let skippedPendingWebhook = 0;
+    let skippedTooRecent = 0;
 
     for (const job of completedLighthouseJobs) {
       const jobId = job.id as string;
+
+      // Safety check: Skip jobs completed within grace period
+      // This prevents race conditions where job is still finalizing
+      const jobAge = Date.now() - (job.finishedOn || job.processedOn || 0);
+      if (jobAge < this.gracePeriodMs) {
+        skippedTooRecent++;
+        continue;
+      }
 
       if (!job.data?.webhookUrl) {
         // No webhook configured - safe to remove
@@ -73,20 +97,27 @@ export class LighthouseCleanupService {
     }
 
     // 4. Clean failed Lighthouse jobs (always safe - no LHR to recover)
-    const failedCleaned = await lighthouseQueue.clean(0, 10000, 'failed');
+    // Use grace period to prevent race conditions with jobs still finalizing
+    const failedCleaned = await lighthouseQueue.clean(
+      this.gracePeriodMs,
+      10000,
+      'failed',
+    );
 
     // 5. Clear only batches where ALL jobs have resolved webhooks
     this.lighthouseService.clearResolvedBatches(resolvedJobIds);
 
     // 6. Clean completed webhook jobs (they've served their purpose as "proof")
-    await webhookQueue.clean(0, 10000, 'completed');
+    // Use grace period to ensure webhooks are fully processed
+    await webhookQueue.clean(this.gracePeriodMs, 10000, 'completed');
 
     const stats = await this.lighthouseService.getQueueStats();
 
     this.logger.log(
       `Cleanup done. Removed ${completedCleaned + failedCleaned.length} jobs ` +
         `(${completedCleaned} completed, ${failedCleaned.length} failed), ` +
-        `skipped ${skippedPendingWebhook} pending webhook delivery`,
+        `skipped ${skippedPendingWebhook} pending webhook delivery, ` +
+        `${skippedTooRecent} too recent (within grace period)`,
     );
 
     return {

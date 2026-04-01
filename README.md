@@ -324,9 +324,14 @@ DASHBOARD_PASSWORD_HASH=bcrypt-hash
 # Performance
 WORKER_CONCURRENCY=8  # Adjust based on server resources
 
+# Cleanup
+CLEANUP_GRACE_PERIOD_MS=300000  # 5 minutes (default) - prevents race conditions
+
 # CORS
 CORS_ORIGINS=http://localhost:5173,https://your-domain.com
 ```
+
+**Note on Cleanup Grace Period:** The `CLEANUP_GRACE_PERIOD_MS` setting prevents race conditions where jobs are removed from Redis while still finalizing. Jobs completed within this timeframe are kept during cleanup cycles. Default is 5 minutes (300000ms). Increase if you experience "Missing key" errors with long-running audits.
 
 ### Lighthouse Options
 
